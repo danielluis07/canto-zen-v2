@@ -1,0 +1,407 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-08-26T00:00:00.000Z",
+  "title": "Design System: Canto Zen",
+  "extensions": {
+    "colorMeta": {
+      "warm-white": {
+        "role": "neutral",
+        "displayName": "Warm White",
+        "canonical": "oklch(0.983 0.006 84.6)",
+        "tonalRamp": [
+          "oklch(0.15 0.006 84.6)",
+          "oklch(0.27 0.006 84.6)",
+          "oklch(0.39 0.006 84.6)",
+          "oklch(0.51 0.006 84.6)",
+          "oklch(0.63 0.006 84.6)",
+          "oklch(0.75 0.006 84.6)",
+          "oklch(0.87 0.006 84.6)",
+          "oklch(0.983 0.006 84.6)"
+        ]
+      },
+      "ink": {
+        "role": "primary",
+        "displayName": "Ink",
+        "canonical": "oklch(0.285 0.007 95.3)",
+        "tonalRamp": [
+          "oklch(0.15 0.007 95.3)",
+          "oklch(0.285 0.007 95.3)",
+          "oklch(0.39 0.007 95.3)",
+          "oklch(0.51 0.007 95.3)",
+          "oklch(0.63 0.007 95.3)",
+          "oklch(0.75 0.007 95.3)",
+          "oklch(0.87 0.007 95.3)",
+          "oklch(0.95 0.007 95.3)"
+        ]
+      },
+      "greige": {
+        "role": "neutral",
+        "displayName": "Greige",
+        "canonical": "oklch(0.945 0.013 82.4)",
+        "tonalRamp": [
+          "oklch(0.15 0.013 82.4)",
+          "oklch(0.27 0.013 82.4)",
+          "oklch(0.39 0.013 82.4)",
+          "oklch(0.51 0.013 82.4)",
+          "oklch(0.63 0.013 82.4)",
+          "oklch(0.75 0.013 82.4)",
+          "oklch(0.87 0.013 82.4)",
+          "oklch(0.945 0.013 82.4)"
+        ]
+      },
+      "stone": {
+        "role": "neutral",
+        "displayName": "Stone",
+        "canonical": "oklch(0.533 0.018 82.8)",
+        "tonalRamp": [
+          "oklch(0.15 0.018 82.8)",
+          "oklch(0.27 0.018 82.8)",
+          "oklch(0.39 0.018 82.8)",
+          "oklch(0.533 0.018 82.8)",
+          "oklch(0.63 0.018 82.8)",
+          "oklch(0.75 0.018 82.8)",
+          "oklch(0.87 0.018 82.8)",
+          "oklch(0.95 0.018 82.8)"
+        ]
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "Line",
+        "canonical": "oklch(0.902 0.017 84.6)",
+        "tonalRamp": [
+          "oklch(0.15 0.017 84.6)",
+          "oklch(0.27 0.017 84.6)",
+          "oklch(0.39 0.017 84.6)",
+          "oklch(0.51 0.017 84.6)",
+          "oklch(0.63 0.017 84.6)",
+          "oklch(0.75 0.017 84.6)",
+          "oklch(0.902 0.017 84.6)",
+          "oklch(0.96 0.017 84.6)"
+        ]
+      },
+      "sky": {
+        "role": "neutral",
+        "displayName": "Sky",
+        "canonical": "oklch(0.968 0.023 78.2)",
+        "tonalRamp": [
+          "oklch(0.15 0.023 78.2)",
+          "oklch(0.27 0.023 78.2)",
+          "oklch(0.39 0.023 78.2)",
+          "oklch(0.51 0.023 78.2)",
+          "oklch(0.63 0.023 78.2)",
+          "oklch(0.75 0.023 78.2)",
+          "oklch(0.87 0.023 78.2)",
+          "oklch(0.968 0.023 78.2)"
+        ]
+      },
+      "paper-white": {
+        "role": "neutral",
+        "displayName": "Paper White",
+        "canonical": "oklch(1 0 0)",
+        "tonalRamp": [
+          "oklch(0.15 0 0)",
+          "oklch(0.27 0 0)",
+          "oklch(0.39 0 0)",
+          "oklch(0.51 0 0)",
+          "oklch(0.63 0 0)",
+          "oklch(0.75 0 0)",
+          "oklch(0.87 0 0)",
+          "oklch(1 0 0)"
+        ]
+      },
+      "oak": {
+        "role": "secondary",
+        "displayName": "Oak",
+        "canonical": "oklch(0.655 0.086 57.1)",
+        "tonalRamp": [
+          "oklch(0.15 0.086 57.1)",
+          "oklch(0.27 0.086 57.1)",
+          "oklch(0.39 0.086 57.1)",
+          "oklch(0.51 0.086 57.1)",
+          "oklch(0.655 0.086 57.1)",
+          "oklch(0.75 0.086 57.1)",
+          "oklch(0.87 0.086 57.1)",
+          "oklch(0.95 0.086 57.1)"
+        ]
+      },
+      "oak-deep": {
+        "role": "secondary",
+        "displayName": "Oak Deep",
+        "canonical": "oklch(0.571 0.081 56.6)",
+        "tonalRamp": [
+          "oklch(0.15 0.081 56.6)",
+          "oklch(0.27 0.081 56.6)",
+          "oklch(0.39 0.081 56.6)",
+          "oklch(0.571 0.081 56.6)",
+          "oklch(0.67 0.081 56.6)",
+          "oklch(0.79 0.081 56.6)",
+          "oklch(0.87 0.081 56.6)",
+          "oklch(0.95 0.081 56.6)"
+        ]
+      },
+      "sage": {
+        "role": "tertiary",
+        "displayName": "Sage",
+        "canonical": "oklch(0.617 0.045 130.6)",
+        "tonalRamp": [
+          "oklch(0.15 0.045 130.6)",
+          "oklch(0.27 0.045 130.6)",
+          "oklch(0.39 0.045 130.6)",
+          "oklch(0.51 0.045 130.6)",
+          "oklch(0.617 0.045 130.6)",
+          "oklch(0.75 0.045 130.6)",
+          "oklch(0.87 0.045 130.6)",
+          "oklch(0.95 0.045 130.6)"
+        ]
+      },
+      "sage-deep": {
+        "role": "tertiary",
+        "displayName": "Sage Deep",
+        "canonical": "oklch(0.518 0.044 132.2)",
+        "tonalRamp": [
+          "oklch(0.15 0.044 132.2)",
+          "oklch(0.27 0.044 132.2)",
+          "oklch(0.39 0.044 132.2)",
+          "oklch(0.518 0.044 132.2)",
+          "oklch(0.63 0.044 132.2)",
+          "oklch(0.75 0.044 132.2)",
+          "oklch(0.87 0.044 132.2)",
+          "oklch(0.95 0.044 132.2)"
+        ]
+      },
+      "destructive": {
+        "role": "error",
+        "displayName": "Destructive Red",
+        "canonical": "oklch(0.577 0.245 27.325)",
+        "tonalRamp": [
+          "oklch(0.15 0.245 27.325)",
+          "oklch(0.27 0.245 27.325)",
+          "oklch(0.39 0.245 27.325)",
+          "oklch(0.577 0.245 27.325)",
+          "oklch(0.67 0.245 27.325)",
+          "oklch(0.79 0.245 27.325)",
+          "oklch(0.87 0.245 27.325)",
+          "oklch(0.95 0.245 27.325)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "The hero h1 only. Fraunces 300, held to a 15ch balanced measure."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Section titles set by SectionHeader. The collection section runs a larger variant."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Product and room names. Weight 400, identified by the serif rather than by weight."
+      },
+      "body-lead": {
+        "displayName": "Body Lead",
+        "purpose": "Hero subhead and collection description, held to 44ch."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Section notes, footer prose and links, held to 52ch. A 13px step carries product metadata."
+      },
+      "label": {
+        "displayName": "Micro-Label",
+        "purpose": "Anything that names a thing: eyebrows, buttons, nav, footer headings. 0.16em on controls, 0.18em on headings."
+      },
+      "caption": {
+        "displayName": "Caption",
+        "purpose": "Counts, availability tags, ruler figures, the hero catalogue plate. Always a fact, never a sentence."
+      }
+    },
+    "shadows": [
+      {
+        "name": "product-lift-row",
+        "value": "0 20px 44px -26px oklch(0.285 0.007 95.3 / 0.5)",
+        "purpose": "The only shadow in the system. Hover state on the 4:5 product card image, paired with a 4px lift over 500ms ease-out."
+      },
+      {
+        "name": "product-lift-plate",
+        "value": "0 18px 38px -24px oklch(0.285 0.007 95.3 / 0.5)",
+        "purpose": "The same hover gesture scaled down for the smaller ProductsSpread thumbnail."
+      }
+    ],
+    "motion": [
+      {
+        "name": "duration-nav",
+        "value": "200ms",
+        "purpose": "Navigation and icon colour transitions."
+      },
+      {
+        "name": "duration-control",
+        "value": "300ms",
+        "purpose": "Control and link colour, and the left-origin rule sweep on hover."
+      },
+      {
+        "name": "duration-lift",
+        "value": "500ms",
+        "purpose": "Product card lift and shadow."
+      },
+      {
+        "name": "duration-image",
+        "value": "700ms",
+        "purpose": "Image scale on room panels and the collection photograph."
+      },
+      {
+        "name": "ease-standard",
+        "value": "cubic-bezier(0, 0, 0.2, 1)",
+        "purpose": "ease-out. The default and effectively the only easing for state transitions."
+      },
+      {
+        "name": "ease-enter",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Page-load entrance for the four hero lines, over 0.9s with a 60/140/230/320ms stagger."
+      },
+      {
+        "name": "hero-drift",
+        "value": "translate3d(0, 15%, 0) over animation-range 0 90vh on scroll(root block)",
+        "purpose": "The page's one signature moment: the hero photograph drifts slower than the type in front of it. Scroll-driven, no JavaScript, @supports-guarded."
+      },
+      {
+        "name": "rise",
+        "value": "opacity 0 to 1 and translate3d(0, 1.75rem, 0) to none over animation-range entry 15% entry 90% on view()",
+        "purpose": "Section content rises into place on entry. View-timeline driven, @supports-guarded, disabled by name under prefers-reduced-motion."
+      }
+    ],
+    "breakpoints": [
+      { "name": "sm", "value": "640px" },
+      { "name": "lg", "value": "1024px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Solid Control",
+      "kind": "button",
+      "refersTo": "link-button",
+      "description": "The page's one filled control. Ink at rest, oak-deep on hover; nothing else on the page sits in oak while idle.",
+      "html": "<a class=\"ds-link-button\" href=\"#\">Ver os móveis</a>",
+      "css": ".ds-link-button { display: inline-flex; align-items: center; justify-content: center; height: 48px; padding: 0 32px; background: var(--foreground, oklch(0.285 0.007 95.3)); color: var(--background, oklch(0.983 0.006 84.6)); border-radius: 2px; font-family: 'Work Sans', ui-sans-serif, system-ui, sans-serif; font-size: 0.6875rem; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; text-decoration: none; transition: background-color 300ms cubic-bezier(0, 0, 0.2, 1); } .ds-link-button:hover { background: var(--oak-deep, oklch(0.571 0.081 56.6)); } .ds-link-button:focus-visible { outline: 2px solid var(--ring, oklch(0.518 0.044 132.2)); outline-offset: 4px; }"
+    },
+    {
+      "name": "Text Control",
+      "kind": "button",
+      "refersTo": "text-link",
+      "description": "The quiet counterpart. A hairline sits under the label at rest in ink; an oak rule draws itself over it from the left on hover.",
+      "html": "<a class=\"ds-text-link\" href=\"#\">Materiais e cuidados<span class=\"ds-text-link-rest\" aria-hidden=\"true\"></span><span class=\"ds-text-link-draw\" aria-hidden=\"true\"></span></a>",
+      "css": ".ds-text-link { position: relative; display: inline-flex; width: fit-content; align-items: center; padding-bottom: 6px; color: var(--foreground, oklch(0.285 0.007 95.3)); font-family: 'Work Sans', ui-sans-serif, system-ui, sans-serif; font-size: 0.6875rem; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; text-decoration: none; transition: color 300ms cubic-bezier(0, 0, 0.2, 1); } .ds-text-link:hover { color: var(--oak-deep, oklch(0.571 0.081 56.6)); } .ds-text-link:focus-visible { outline: 2px solid var(--ring, oklch(0.518 0.044 132.2)); outline-offset: 4px; } .ds-text-link-rest { position: absolute; inset-inline: 0; bottom: 0; height: 1px; background: color-mix(in oklch, var(--foreground, oklch(0.285 0.007 95.3)) 25%, transparent); } .ds-text-link-draw { position: absolute; inset-inline: 0; bottom: 0; height: 1px; background: var(--oak, oklch(0.655 0.086 57.1)); transform: scaleX(0); transform-origin: left; transition: transform 300ms cubic-bezier(0, 0, 0.2, 1); } .ds-text-link:hover .ds-text-link-draw { transform: scaleX(1); }"
+    },
+    {
+      "name": "Navigation Link",
+      "kind": "nav",
+      "refersTo": "nav-link",
+      "description": "Desktop room link. Quiet ink micro-type at rest; the only motion is the hairline drawing itself in from the left on hover. The current room keeps the rule permanently, in ink.",
+      "html": "<nav class=\"ds-nav\" aria-label=\"Ambientes\"><a class=\"ds-nav-link\" href=\"#\">Sala<span class=\"ds-nav-rule\" aria-hidden=\"true\"></span></a><a class=\"ds-nav-link ds-nav-link-active\" href=\"#\" aria-current=\"page\">Quarto<span class=\"ds-nav-rule\" aria-hidden=\"true\"></span></a><a class=\"ds-nav-link\" href=\"#\">Cozinha<span class=\"ds-nav-rule\" aria-hidden=\"true\"></span></a><a class=\"ds-nav-link\" href=\"#\">Escritório<span class=\"ds-nav-rule\" aria-hidden=\"true\"></span></a></nav>",
+      "css": ".ds-nav { display: flex; align-items: center; gap: 36px; } .ds-nav-link { position: relative; padding: 8px 0; color: color-mix(in oklch, var(--foreground, oklch(0.285 0.007 95.3)) 75%, transparent); font-family: 'Work Sans', ui-sans-serif, system-ui, sans-serif; font-size: 0.75rem; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; text-decoration: none; transition: color 200ms cubic-bezier(0, 0, 0.2, 1); } .ds-nav-link:hover { color: var(--foreground, oklch(0.285 0.007 95.3)); } .ds-nav-link:focus-visible { outline: 2px solid var(--ring, oklch(0.518 0.044 132.2)); outline-offset: 4px; } .ds-nav-rule { position: absolute; inset-inline: 0; bottom: 0; height: 1px; background: var(--oak, oklch(0.655 0.086 57.1)); transform: scaleX(0); transform-origin: left; transition: transform 300ms cubic-bezier(0, 0, 0.2, 1); } .ds-nav-link:hover .ds-nav-rule { transform: scaleX(1); } .ds-nav-link-active .ds-nav-rule { transform: scaleX(1); background: var(--foreground, oklch(0.285 0.007 95.3)); } .ds-nav-link-active:hover .ds-nav-rule { background: var(--oak, oklch(0.655 0.086 57.1)); }"
+    },
+    {
+      "name": "Product Card",
+      "kind": "card",
+      "refersTo": "product-card",
+      "description": "The browsing unit. A 4:5 photograph over a fixed order of facts, closed by a ledger line with price at one end and the delivery promise at the other. The one shadow in the system lives on its hover state.",
+      "html": "<article class=\"ds-product-card\"><a class=\"ds-product-link\" href=\"#\"><div class=\"ds-product-media\"><div class=\"ds-product-ruler\" aria-hidden=\"true\"><span class=\"ds-tick\"></span><span class=\"ds-lead\"></span><span class=\"ds-figure\">184 cm</span><span class=\"ds-lead\"></span><span class=\"ds-tick\"></span></div></div><div class=\"ds-product-body\"><h3 class=\"ds-product-name\">Mesa de centro Seixo</h3><p class=\"ds-product-meta\">Freijó natural · 120 × 60 × 38 cm</p><div class=\"ds-product-ledger\"><p class=\"ds-price\"><span class=\"ds-price-was\">R$ 3.480</span><span class=\"ds-price-now\">R$ 2.960</span></p><p class=\"ds-availability\">Pronta entrega</p></div></div></a></article>",
+      "css": ".ds-product-card { position: relative; width: 260px; } .ds-product-link { display: block; text-decoration: none; color: inherit; } .ds-product-link:focus-visible { outline: 2px solid var(--ring, oklch(0.518 0.044 132.2)); outline-offset: 4px; } .ds-product-media { position: relative; aspect-ratio: 4 / 5; overflow: hidden; border-radius: 2px; background: var(--secondary, oklch(0.945 0.013 82.4)); transition: transform 500ms cubic-bezier(0, 0, 0.2, 1), box-shadow 500ms cubic-bezier(0, 0, 0.2, 1); } .ds-product-card:hover .ds-product-media { transform: translateY(-4px); box-shadow: 0 20px 44px -26px oklch(0.285 0.007 95.3 / 0.5); } .ds-product-ruler { position: absolute; inset-inline: 20px; bottom: 20px; display: flex; align-items: center; gap: 8px; color: color-mix(in oklch, var(--foreground, oklch(0.285 0.007 95.3)) 65%, transparent); } .ds-tick { width: 1px; height: 10px; background: currentColor; } .ds-lead { flex: 1; height: 1px; background: currentColor; } .ds-figure { border-radius: 2px; background: color-mix(in oklch, var(--background, oklch(0.983 0.006 84.6)) 85%, transparent); padding: 2px 6px; font-family: 'Work Sans', ui-sans-serif, system-ui, sans-serif; font-size: 0.625rem; line-height: 1; letter-spacing: 0.12em; text-transform: uppercase; } .ds-product-body { margin-top: 20px; } .ds-product-name { margin: 0; font-family: Fraunces, Georgia, serif; font-size: 1.0625rem; font-weight: 400; line-height: 1.375; letter-spacing: -0.01em; transition: color 300ms cubic-bezier(0, 0, 0.2, 1); } .ds-product-card:hover .ds-product-name { color: var(--oak-deep, oklch(0.571 0.081 56.6)); } .ds-product-meta { margin: 6px 0 0; font-family: 'Work Sans', ui-sans-serif, system-ui, sans-serif; font-size: 0.8125rem; color: var(--muted-foreground, oklch(0.533 0.018 82.8)); } .ds-product-ledger { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; margin-top: 16px; border-top: 1px solid var(--border, oklch(0.902 0.017 84.6)); padding-top: 14px; } .ds-price { display: flex; align-items: baseline; gap: 8px; margin: 0; font-family: 'Work Sans', ui-sans-serif, system-ui, sans-serif; } .ds-price-was { font-size: 0.8125rem; color: color-mix(in oklch, var(--muted-foreground, oklch(0.533 0.018 82.8)) 75%, transparent); text-decoration: line-through; } .ds-price-now { font-size: 0.9375rem; font-weight: 500; } .ds-availability { margin: 0; font-family: 'Work Sans', ui-sans-serif, system-ui, sans-serif; font-size: 0.625rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--sage-deep, oklch(0.518 0.044 132.2)); }"
+    },
+    {
+      "name": "Availability Tag",
+      "kind": "chip",
+      "refersTo": "availability-tag",
+      "description": "Sage for a promise the store can keep; muted ink for one it cannot. No ground, no border, no dot — the colour is the whole signal.",
+      "html": "<p class=\"ds-tag ds-tag-ready\">Pronta entrega</p><p class=\"ds-tag ds-tag-made\">Sob encomenda · 6 semanas</p><p class=\"ds-tag ds-tag-out\">Esgotado</p>",
+      "css": ".ds-tag { margin: 0 0 8px; font-family: 'Work Sans', ui-sans-serif, system-ui, sans-serif; font-size: 0.625rem; letter-spacing: 0.14em; text-transform: uppercase; } .ds-tag-ready, .ds-tag-made { color: var(--sage-deep, oklch(0.518 0.044 132.2)); } .ds-tag-out { color: color-mix(in oklch, var(--muted-foreground, oklch(0.533 0.018 82.8)) 70%, transparent); }"
+    },
+    {
+      "name": "Section Header",
+      "kind": "custom",
+      "refersTo": null,
+      "description": "The system's most reused composition and the reason every section reads as the same document: a top hairline, an eyebrow, a light Fraunces title, an optional 52ch note, and the section's exit pushed to the far right.",
+      "html": "<div class=\"ds-section-header\"><div class=\"ds-section-lede\"><p class=\"ds-eyebrow\">Pronta entrega</p><h2 class=\"ds-section-title\">Disponível agora</h2><p class=\"ds-section-note\">Peças prontas em estoque, sem prazo de produção.</p></div><a class=\"ds-section-action\" href=\"#\">Ver todos os móveis<span class=\"ds-section-rest\" aria-hidden=\"true\"></span><span class=\"ds-section-draw\" aria-hidden=\"true\"></span></a></div>",
+      "css": ".ds-section-header { display: flex; flex-direction: column; gap: 24px; border-top: 1px solid var(--border, oklch(0.902 0.017 84.6)); padding-top: 24px; } @media (min-width: 1024px) { .ds-section-header { flex-direction: row; align-items: flex-end; justify-content: space-between; gap: 64px; } } .ds-section-lede { max-width: 42rem; } .ds-eyebrow { margin: 0; font-family: 'Work Sans', ui-sans-serif, system-ui, sans-serif; font-size: 0.6875rem; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted-foreground, oklch(0.533 0.018 82.8)); } .ds-section-title { margin: 16px 0 0; font-family: Fraunces, Georgia, serif; font-size: clamp(1.75rem, 3.2vw, 2.75rem); font-weight: 300; line-height: 1.08; letter-spacing: -0.01em; } .ds-section-note { margin: 16px 0 0; max-width: 52ch; font-family: 'Work Sans', ui-sans-serif, system-ui, sans-serif; font-size: 0.9375rem; line-height: 1.625; color: var(--muted-foreground, oklch(0.533 0.018 82.8)); } .ds-section-action { position: relative; flex-shrink: 0; display: inline-flex; width: fit-content; align-items: center; padding-bottom: 6px; color: var(--foreground, oklch(0.285 0.007 95.3)); font-family: 'Work Sans', ui-sans-serif, system-ui, sans-serif; font-size: 0.6875rem; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; text-decoration: none; transition: color 300ms cubic-bezier(0, 0, 0.2, 1); } .ds-section-action:hover { color: var(--oak-deep, oklch(0.571 0.081 56.6)); } .ds-section-action:focus-visible { outline: 2px solid var(--ring, oklch(0.518 0.044 132.2)); outline-offset: 4px; } .ds-section-rest { position: absolute; inset-inline: 0; bottom: 0; height: 1px; background: color-mix(in oklch, var(--foreground, oklch(0.285 0.007 95.3)) 25%, transparent); } .ds-section-draw { position: absolute; inset-inline: 0; bottom: 0; height: 1px; background: var(--oak, oklch(0.655 0.086 57.1)); transform: scaleX(0); transform-origin: left; transition: transform 300ms cubic-bezier(0, 0, 0.2, 1); } .ds-section-action:hover .ds-section-draw { transform: scaleX(1); }"
+    },
+    {
+      "name": "Icon Action",
+      "kind": "nav",
+      "refersTo": null,
+      "description": "Account and bag actions in the navigation bar. A 40px hit target around an 18px 1.5-weight glyph, never filled and never boxed; the bag carries an oak-deep count badge.",
+      "html": "<div class=\"ds-icon-row\"><a class=\"ds-icon-action\" href=\"#\" aria-label=\"Minha conta\"><svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2\"/><circle cx=\"12\" cy=\"7\" r=\"4\"/></svg></a><a class=\"ds-icon-action\" href=\"#\" aria-label=\"Sacola, 2 itens\"><svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z\"/><path d=\"M3 6h18\"/><path d=\"M16 10a4 4 0 0 1-8 0\"/></svg><span class=\"ds-badge\" aria-hidden=\"true\">2</span></a></div>",
+      "css": ".ds-icon-row { display: flex; align-items: center; gap: 4px; } .ds-icon-action { position: relative; display: flex; width: 40px; height: 40px; align-items: center; justify-content: center; color: color-mix(in oklch, var(--foreground, oklch(0.285 0.007 95.3)) 75%, transparent); transition: color 200ms cubic-bezier(0, 0, 0.2, 1); } .ds-icon-action:hover { color: var(--oak-deep, oklch(0.571 0.081 56.6)); } .ds-icon-action:focus-visible { outline: 2px solid var(--ring, oklch(0.518 0.044 132.2)); outline-offset: 2px; } .ds-badge { position: absolute; top: 4px; right: 4px; min-width: 16px; border-radius: 2px; background: var(--oak-deep, oklch(0.571 0.081 56.6)); padding: 0 4px; text-align: center; font-family: 'Work Sans', ui-sans-serif, system-ui, sans-serif; font-size: 0.625rem; line-height: 16px; font-weight: 500; color: var(--background, oklch(0.983 0.006 84.6)); }"
+    },
+    {
+      "name": "Wordmark",
+      "kind": "custom",
+      "refersTo": null,
+      "description": "Single-ink by design: the brand signal comes from weight and style contrast inside the serif, not from colour. Fraunces regular for 'Canto', light italic for 'Zen'.",
+      "html": "<span class=\"ds-wordmark\">Canto<span class=\"ds-wordmark-zen\">Zen</span></span>",
+      "css": ".ds-wordmark { font-family: Fraunces, Georgia, serif; font-size: 1.375rem; line-height: 1; letter-spacing: -0.015em; color: var(--foreground, oklch(0.285 0.007 95.3)); } .ds-wordmark-zen { margin-left: 0.18em; font-weight: 300; font-style: italic; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Quiet Showroom",
+    "overview": "Daylight, warm white walls, and furniture that is allowed to be the loudest thing in the room. The interface is the gallery, never the work. Every surface in this system is the same sheet of warm off-white paper (#FBF9F5); rooms and pieces are cut into it with hairlines rather than set on top of it in cards. When a photograph appears, it is given the whole width and the type moves to the part of the frame that is already empty — nothing is dimmed, darkened, or overlaid to make room for an interface.\n\nThe register is Scandinavian-minimalist and mid-range, not luxury: restrained but never cold, warm but never rustic. Warmth comes from hue, not ornament — the neutrals all carry a low-chroma yellow-orange cast (hue 78–95), so the page reads as daylight on pale wood rather than as grey. Density is generous. Sections breathe at 80px of vertical air on small screens and 112px on large, and body copy is held to a 44–52ch measure so a paragraph never runs the full 1440px container.\n\nRestraint here is a claim about judgment, not a shortage of ideas. The system earns its quiet by being literal: a panel is wider because the room it names has more categories in it; a ruler is drawn on a photograph only when that piece's data actually declares a width; a tag is sage only when the store can keep the promise it states. Decoration that carries no fact does not survive.",
+    "keyCharacteristics": [
+      "One paper: a single warm off-white ground across the whole site, with exactly one tonal band (greige) available for structural interruption.",
+      "Near-square geometry — a 1.2–5.2px radius scale that reads as \"cut\", not \"rounded\".",
+      "Hairline rules as the primary structural device; borders separate, they do not enclose.",
+      "Flat at rest, with a single hover-only shadow in the entire system.",
+      "Two serif display weights (300 and 400) carrying all headline hierarchy, against uppercase letterspaced micro-type for everything that names or counts.",
+      "Two accents with distinct jobs: oak for interaction, sage for facts."
+    ],
+    "rules": [
+      {
+        "name": "The Two Registers Rule",
+        "body": "Oak generally carries interactive states; sage generally carries factual, natural signals. Keep the two roles distinct — an element that a visitor can act on reaches for oak, and an element that states something true about a piece reaches for sage. Do not let one accent do the other's job within a single surface.",
+        "section": "colors"
+      },
+      {
+        "name": "The One Band Rule",
+        "body": "Warm white is the ground of the entire site. Greige is available as a structural interruption — currently once per page, under the collection — and its job is to mark a change of reading mode, not to decorate. A second tonal band on the same page dilutes the first into wallpaper.",
+        "section": "colors"
+      },
+      {
+        "name": "The Micro-Label Rule",
+        "body": "Anything that names a thing — an eyebrow, a count, a button, a nav item, a status — is uppercase micro-type (11px / 0.16–0.18em / weight 500). Anything that describes a thing is body text. The two never swap jobs. A description never gets letterspaced uppercase treatment to look important, and a label never softens into sentence case to look friendly.",
+        "section": "typography"
+      },
+      {
+        "name": "The Light Display Rule",
+        "body": "Display and headline type is set at weight 300. Emphasis inside a headline comes from italic, not from weight. A bold serif headline does not exist in this system.",
+        "section": "typography"
+      },
+      {
+        "name": "The Proportion Is The Information Rule",
+        "body": "Where a layout can encode a fact in its geometry, it should. The room band gives each panel a flex-grow equal to its number of categories, so Sala (6 categories) is half again as wide as Escritório (4). A visitor reading only the shapes has already learned something true.",
+        "section": "layout"
+      },
+      {
+        "name": "The Flat-At-Rest Rule",
+        "body": "Nothing on this site casts a shadow while it is sitting still. Depth comes from hairlines and tonal bands. The one shadow in the system is a response: a product thumbnail lifting 4px under the cursor.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do build new sections out of SectionHeader + a hairline-ruled content block. It is what makes fifteen routes read as one document.",
+      "Do hold prose to its measure: 44ch for lead paragraphs, 52ch for section notes, regardless of how wide the container is.",
+      "Do reach for a hairline before a border-box, a tonal band, or a shadow when something needs separating.",
+      "Do state real catalogue facts — measurements, finish, weeks to produce, warranty months, availability — wherever a section has room for them. A fact is a better ornament than an ornament.",
+      "Do degrade measurement-dependent UI gracefully. The sofa-heron family has no measurements on file; the width ruler and the measurements line must simply not render rather than print zeros.",
+      "Do guard any new scroll- or view-timeline animation with @supports, and switch it off by name in the prefers-reduced-motion block.",
+      "Do give every interactive element a visible focus outline at 2px with 2–4px of offset."
+    ],
+    "donts": [
+      "Don't take shape or sizing cues from components/ui/button.tsx. It is unmodified shadcn scaffolding — 32px default height, sentence-case text-sm labels, shadcn's own size scale — and it does not reflect this system. (Its radius happens to resolve correctly, since --radius-lg is 2px here, which makes the mismatch easy to miss.) The canonical controls are LinkButton and TextLink.",
+      "Don't introduce a second tonal band, a card ground, or a coloured section background. Warm white is the page; greige is the one interruption.",
+      "Don't add a resting shadow, an elevation scale, or a card that floats. See The Flat-At-Rest Rule.",
+      "Don't put an element in oak while it is idle, or in sage while it is being interacted with.",
+      "Don't set a headline heavier than weight 400, or letterspace a sentence of prose to make it look designed. Emphasis inside a headline is italic Fraunces.",
+      "Don't raise the radius. Anything above ~5px reads as a different product.",
+      "Don't introduce new image crops when 4:5, 3:4, 4:3, and 16:11 already exist, and don't render an image container without its greige placeholder ground.",
+      "Don't collapse a horizontally-proportioned row into a stack of half-height cards on small screens. Keep the crop and let it scroll with snap points.",
+      "Don't invent testimonials, ratings, reviews, press logos, showroom addresses, or partner names to fill a layout. If a section needs social proof to work, the section is wrong."
+    ]
+  }
+}
