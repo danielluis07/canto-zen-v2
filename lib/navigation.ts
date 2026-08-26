@@ -24,7 +24,7 @@ export const environmentLinks: EnvironmentNavLink[] = enviroments.map(
 
 /** Secondary catalog entries — footer columns and the mobile menu. */
 export const catalogLinks: NavLink[] = [
-  { href: "/moveis", label: "Todos os móveis" },
+  { href: "/produtos", label: "Todos os móveis" },
   { href: "/materiais", label: "Materiais e cuidados" },
   { href: "/diario", label: "Diário" },
 ];

@@ -22,7 +22,7 @@ export default function Home() {
         title="Disponível agora"
         note="Peças prontas em estoque, sem prazo de produção."
         products={readyToShip}
-        action={{ href: "/moveis", label: "Ver todos os móveis" }}
+        action={{ href: "/produtos", label: "Ver todos os móveis" }}
       />
 
       <Collection collection={featuredCollection} />
@@ -32,7 +32,7 @@ export default function Home() {
         title="A peça que define o cômodo"
         note="A maior superfície do ambiente decide a escala de tudo o que entra depois. Escolha essa primeiro."
         items={anchors}
-        action={{ href: "/moveis", label: "Ver todos os móveis" }}
+        action={{ href: "/produtos", label: "Ver todos os móveis" }}
       />
     </>
   );

@@ -19,7 +19,7 @@ Canto Zen is a fictional Brazilian home-furniture e-commerce site built as a por
 
 ## Positioning
 
-Portfolio commerce demos usually stop at a grid of cards. This one commits to a real catalog: 85 products across 4 rooms and 20 product types, organized into families with actual measurements, finishes, availability states, warranty terms, collections, and editorial articles that cross-reference specific pieces by slug. The depth of the data model is the argument — the UI has real facts to be disciplined about, so restraint reads as judgment rather than emptiness.
+Portfolio commerce demos usually stop at a grid of cards. This one commits to a real catalog: 65 products across 4 rooms and 20 product types, organized into families with actual measurements, finishes, availability states, warranty terms, collections, and editorial articles that cross-reference specific pieces by slug. The depth of the data model is the argument — the UI has real facts to be disciplined about, so restraint reads as judgment rather than emptiness.
 
 ## Operating Context
 
@@ -27,7 +27,7 @@ Portfolio commerce demos usually stop at a grid of cards. This one commits to a 
 - **Secondary axes:** product type (20 types), family (a named silhouette shared across finishes), collection (curated multi-piece sets), and material.
 - **A product is a family plus a finish.** Measurements belong to the family; price, availability, and imagery belong to the product.
 - **Editorial (`Diário`)** is room-scoped and names specific product slugs in its photo captions, so articles and catalog must stay consistent.
-- **Routes already committed in navigation:** `/ambientes/[slug]`, `/moveis`, `/moveis/[slug]`, `/materiais`, `/diario`, `/entrega`, `/trocas`, `/garantia`, `/montagem`, `/contato`, `/conta`, `/sacola`, `/termos`, `/privacidade`. Only the home page is built today.
+- **Routes already committed in navigation:** `/ambientes/[slug]`, `/produtos`, `/produtos/[slug]`, `/materiais`, `/diario`, `/entrega`, `/trocas`, `/garantia`, `/montagem`, `/contato`, `/conta`, `/sacola`, `/termos`, `/privacidade`. The home page and `/produtos` are built today.
 
 ## Capabilities and Constraints
 
@@ -58,7 +58,7 @@ The visual direction currently recorded in `README.md` (palette, radius, motion 
 
 ## Evidence on Hand
 
-- **Real content that exists:** 85 products with full specifications, 20 product types, 4 rooms with descriptions, product families with measurements, 10 colors, 14 materials with care instructions, 2 collections, 4 editorial articles with full body copy and photo captions.
+- **Real content that exists:** 65 products with full specifications, 20 product types, 4 rooms with descriptions, product families with measurements, 10 colors, 14 materials with care instructions, 2 collections, 4 editorial articles with full body copy and photo captions.
 - **Deliberately absent — never fabricate:** customers, testimonials, reviews, ratings, press mentions, sales figures, showroom addresses, phone numbers, CNPJ, real shipping partners, or any claim that Canto Zen is a real company. The site may be a convincing fiction; it must not assert real-world facts.
 - **Local assets:** `public/images/hero.webp`. All other imagery is remote Unsplash via `lib/utils.ts`.
 

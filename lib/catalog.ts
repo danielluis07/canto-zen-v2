@@ -25,7 +25,7 @@ export const getTypeLabel = (slug: string): string =>
 export const getMainImage = (product: Product) =>
   product.images.find((image) => image.role === "main") ?? product.images[0];
 
-export const productHref = (product: Product) => `/moveis/${product.slug}`;
+export const productHref = (product: Product) => `/produtos/${product.slug}`;
 
 const byOrder = (a: Product, b: Product) => a.order - b.order;
 

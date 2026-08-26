@@ -61,7 +61,7 @@ export function Hero() {
         <div
           className="hero-line mt-11 flex flex-wrap items-center gap-x-10 gap-y-5"
           style={{ "--enter-delay": "320ms" } as React.CSSProperties}>
-          <LinkButton href="/moveis">Ver os móveis</LinkButton>
+          <LinkButton href="/produtos">Ver os móveis</LinkButton>
           <TextLink href="/materiais">Materiais e cuidados</TextLink>
         </div>
       </div>

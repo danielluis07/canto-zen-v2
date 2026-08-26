@@ -28,7 +28,7 @@ export function Environments() {
         eyebrow="Ambientes"
         title="Comece pelo cômodo"
         note="Cada peça aparece no ambiente para o qual foi dimensionada."
-        action={{ href: "/moveis", label: "Ver o catálogo inteiro" }}
+        action={{ href: "/produtos", label: "Ver o catálogo inteiro" }}
       />
 
       <ul className="rise -mx-6 mt-12 grid grid-cols-2 border-y border-line lg:-mx-10 lg:mt-16 lg:flex lg:items-stretch">
