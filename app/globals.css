@@ -103,6 +103,70 @@
   }
 }
 
+@layer components {
+  /* The page's one signature moment: the hero photograph drifts downward more
+     slowly than the type in front of it. Scroll-driven, so it costs no
+     JavaScript — and where the timeline isn't supported the photograph simply
+     holds still. The media box is oversized and offset upward by the same
+     amount it travels, so the frame never uncovers. */
+  @supports (animation-timeline: scroll()) {
+    .hero-media {
+      animation: hero-drift linear both;
+      animation-timeline: scroll(root block);
+      animation-range: 0 90vh;
+    }
+  }
+
+  /* Section content rises into place as it enters the viewport. Guarded the
+     same way: browsers without view timelines render the finished state, never
+     a blank block. Never put this on an element that also transforms on hover
+     — the animation would win. */
+  @supports (animation-timeline: view()) {
+    .rise {
+      animation: rise linear both;
+      animation-timeline: view();
+      animation-range: entry 15% entry 90%;
+    }
+  }
+
+  /* Page load: the hero's four lines arrive in reading order. */
+  .hero-line {
+    animation: hero-enter 0.9s cubic-bezier(0.16, 1, 0.3, 1) both;
+    animation-delay: var(--enter-delay, 0ms);
+  }
+}
+
+@keyframes hero-drift {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(0, 15%, 0);
+  }
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 1.75rem, 0);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes hero-enter {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 1.25rem, 0);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
 /* Motion is opt-out, not opt-in: state changes stay instant for anyone who
    asked their system to reduce motion. */
 @media (prefers-reduced-motion: reduce) {
@@ -113,5 +177,15 @@
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
+  }
+
+  /* Scroll- and view-driven animations ignore duration, so they have to be
+     switched off by name rather than shortened. */
+  .hero-media,
+  .rise,
+  .hero-line {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
   }
 }
