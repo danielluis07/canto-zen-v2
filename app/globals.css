@@ -25,6 +25,13 @@
   --color-popover: var(--popover);
   --color-card-foreground: var(--card-foreground);
   --color-card: var(--card);
+  /* Brand accents, exposed as Tailwind utilities: bg-sage, text-oak-deep, border-line... */
+  --color-sage: var(--sage);
+  --color-sage-deep: var(--sage-deep);
+  --color-oak: var(--oak);
+  --color-oak-deep: var(--oak-deep);
+  --color-line: var(--line);
+  --color-sky: var(--sky);
   --radius-sm: calc(var(--radius) * 0.6);
   --radius-md: calc(var(--radius) * 0.8);
   --radius-lg: var(--radius);
@@ -35,25 +42,39 @@
 }
 
 :root {
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.145 0 0);
+  /* Solvik — warm, Scandinavian-minimalist palette */
+  --background: oklch(0.983 0.006 84.6); /* #FBF9F5 warm white */
+  --foreground: oklch(0.285 0.007 95.3); /* #2B2A26 soft charcoal ink */
+  --card: oklch(1 0 0); /* pure white — pops slightly off the warm bg */
+  --card-foreground: oklch(0.285 0.007 95.3);
   --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.205 0 0);
-  --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.97 0 0);
-  --secondary-foreground: oklch(0.205 0 0);
-  --muted: oklch(0.97 0 0);
-  --muted-foreground: oklch(0.556 0 0);
-  --accent: oklch(0.97 0 0);
-  --accent-foreground: oklch(0.205 0 0);
-  --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.922 0 0);
-  --input: oklch(0.922 0 0);
-  --ring: oklch(0.708 0 0);
-  --radius: 0.625rem;
+  --popover-foreground: oklch(0.285 0.007 95.3);
+  --primary: oklch(
+    0.285 0.007 95.3
+  ); /* ink — dark primary buttons, hover to oak-deep in-component */
+  --primary-foreground: oklch(0.983 0.006 84.6);
+  --secondary: oklch(0.945 0.013 82.4); /* #F1ECE3 greige */
+  --secondary-foreground: oklch(0.285 0.007 95.3);
+  --muted: oklch(0.945 0.013 82.4);
+  --muted-foreground: oklch(0.533 0.018 82.8); /* #726C61 */
+  --accent: oklch(
+    0.968 0.023 78.2
+  ); /* #FDF3E4 soft warm tint — subtle hover/selected states */
+  --accent-foreground: oklch(0.285 0.007 95.3);
+  --destructive: oklch(0.577 0.245 27.325); /* unchanged */
+  --border: oklch(0.902 0.017 84.6); /* #E4DED2 hairline */
+  --input: oklch(0.902 0.017 84.6);
+  --ring: oklch(0.518 0.044 132.2); /* sage-deep focus ring */
+  --radius: 0.125rem; /* near-square corners — matches the mockup's restraint */
+
+  /* Raw brand accents — use directly where the shadcn slots are too generic
+     (icons, illustration fills, CTA hover states, dividers). */
+  --sage: oklch(0.617 0.045 130.6); /* #7C8B6F */
+  --sage-deep: oklch(0.518 0.044 132.2); /* #5F6E54 */
+  --oak: oklch(0.655 0.086 57.1); /* #B9835B */
+  --oak-deep: oklch(0.571 0.081 56.6); /* #9C6B47 */
+  --line: oklch(0.902 0.017 84.6); /* #E4DED2 */
+  --sky: oklch(0.968 0.023 78.2); /* #FDF3E4 */
 }
 
 @layer base {
@@ -69,5 +90,15 @@
   }
   html {
     @apply font-sans;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-heading;
+    letter-spacing: -0.01em;
+    line-height: 1.08;
   }
 }
