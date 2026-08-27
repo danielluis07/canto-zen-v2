@@ -4,6 +4,7 @@ import Link from "next/link";
 import { SectionHeader } from "@/components/home/section-header";
 import { enviroments } from "@/data/enviroments";
 import { getTypeLabel } from "@/lib/catalog";
+import { environmentHref } from "@/lib/catalog-filters";
 import { cn } from "@/lib/utils";
 
 /** No-break space before the dot, so a wrapped category list never starts a
@@ -47,7 +48,7 @@ export function Environments() {
               index > 0 && "lg:border-l lg:border-line",
             )}>
             <Link
-              href={`/ambientes/${environment.slug}`}
+              href={environmentHref(environment.slug)}
               className="group flex h-full flex-col focus-visible:outline-2 focus-visible:-outline-offset-2">
               <div className="relative aspect-3/4 overflow-hidden bg-secondary lg:aspect-auto lg:h-[clamp(20rem,32vw,30rem)]">
                 <Image

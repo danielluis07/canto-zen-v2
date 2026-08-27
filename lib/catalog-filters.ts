@@ -14,12 +14,17 @@ import type { Product } from "@/types";
 
 export const catalogBasePath = "/produtos";
 
+/* `busca` is a facet like any other even though it has no ledger of its own:
+   it narrows the set, it is counted as active, it is cleared the same way, and
+   — most importantly — it travels through `serialize`, so acting on a census
+   row cannot silently drop what the visitor typed. */
 export const facetKeys = [
   "ambiente",
   "tipo",
   "acabamento",
   "preco",
   "entrega",
+  "busca",
 ] as const;
 
 export type FacetKey = (typeof facetKeys)[number];
@@ -157,6 +162,54 @@ export const materialFacet = [...materialLabels.entries()]
 
 export const priceOf = (product: Product) => resolvePrices(product).current;
 
+/* -------------------------------------------------------------------------
+   Free text.
+
+   The catalog is small enough that a haystack per piece beats an index. What
+   goes into it is what a shopper would plausibly type: the piece's name, its
+   finish, the noun for its type, and the rooms it is sold for — so "palhinha",
+   "cadeira" and "quarto" all reach the same pieces the ledgers would.
+
+   Accents are stripped on both sides, so "sofa" finds "sofá". Terms are
+   ANDed: every word typed has to land somewhere in the piece, which is what
+   makes a second word narrow the set instead of widening it.
+   ------------------------------------------------------------------------- */
+
+const typeLabelBySlug = new Map(
+  productTypes.map((type) => [type.slug, type.label]),
+);
+
+const environmentLabelBySlug = new Map(
+  enviroments.map((environment) => [environment.slug, environment.label]),
+);
+
+const haystacks = new Map(
+  products.map((product) => [
+    product.slug,
+    stripAccents(
+      [
+        product.name,
+        product.finish,
+        typeLabelBySlug.get(product.type) ?? product.type,
+        ...product.environments.map(
+          (slug) => environmentLabelBySlug.get(slug) ?? slug,
+        ),
+      ].join(" "),
+    ),
+  ]),
+);
+
+/** What the visitor typed, reduced to the terms worth matching on. */
+export const searchTerms = (search: string): string[] =>
+  stripAccents(search)
+    .split(/\s+/)
+    .filter(Boolean);
+
+const searchMatches = (product: Product, terms: string[]): boolean => {
+  const haystack = haystacks.get(product.slug) ?? "";
+  return terms.every((term) => haystack.includes(term));
+};
+
 /* ------------------------------------------------------------------------- */
 
 export type CatalogQuery = {
@@ -166,6 +219,8 @@ export type CatalogQuery = {
   /** Bands are ranges, so exactly one may be active at a time. */
   price: string | null;
   availability: string[];
+  /** Free text, as typed — the sentence quotes it back verbatim. */
+  search: string;
   sort: SortSlug;
 };
 
@@ -175,6 +230,7 @@ export const emptyQuery: CatalogQuery = {
   materials: [],
   price: null,
   availability: [],
+  search: "",
   sort: "catalogo",
 };
 
@@ -195,6 +251,17 @@ function readList<T extends string>(
     .map((entry) => entry.trim())
     .filter((entry): entry is T => (allowed as readonly string[]).includes(entry))
     .filter((entry, index, all) => all.indexOf(entry) === index);
+}
+
+/** Free text is the one value that cannot be checked against a list, so it is
+ *  bounded instead: collapsed to single spaces and cut to a length no honest
+ *  query reaches. */
+const searchLimit = 60;
+
+function readSearch(raw: RawSearchParams): string {
+  const value = raw.busca;
+  const source = Array.isArray(value) ? (value[0] ?? "") : (value ?? "");
+  return source.replace(/\s+/g, " ").trim().slice(0, searchLimit);
 }
 
 export function parseCatalogQuery(raw: RawSearchParams): CatalogQuery {
@@ -232,6 +299,7 @@ export function parseCatalogQuery(raw: RawSearchParams): CatalogQuery {
       "entrega",
       availabilityOptions.map((option) => option.slug),
     ),
+    search: readSearch(raw),
     sort: sort[0] ?? "catalogo",
   };
 }
@@ -241,14 +309,16 @@ export const isFiltered = (query: CatalogQuery) =>
   query.types.length > 0 ||
   query.materials.length > 0 ||
   query.price !== null ||
-  query.availability.length > 0;
+  query.availability.length > 0 ||
+  query.search !== "";
 
 export const activeFacetCount = (query: CatalogQuery) =>
   query.environments.length +
   query.types.length +
   query.materials.length +
   (query.price ? 1 : 0) +
-  query.availability.length;
+  query.availability.length +
+  (query.search ? 1 : 0);
 
 /* -------------------------------------------------------------------------
    Matching. `except` drops one facet from the test, which is what makes the
@@ -298,6 +368,10 @@ function matches(
     if (!allowed.includes(product.availability)) return false;
   }
 
+  if (except !== "busca" && query.search) {
+    if (!searchMatches(product, searchTerms(query.search))) return false;
+  }
+
   return true;
 }
 
@@ -339,6 +413,7 @@ function serialize(query: CatalogQuery): string {
   if (query.availability.length) {
     params.set("entrega", query.availability.join(","));
   }
+  if (query.search) params.set("busca", query.search);
   if (query.sort !== "catalogo") params.set("ordem", query.sort);
 
   /* A comma is legal unencoded in a query value, and `ambiente=sala,quarto`
@@ -390,11 +465,21 @@ export function toggleHref(
         ...query,
         availability: toggle(query.availability, slug),
       });
+    case "busca":
+      /* No ledger toggles free text — the input owns it. */
+      return serialize(query);
   }
 }
 
 export const sortHref = (query: CatalogQuery, sort: SortSlug) =>
   serialize({ ...query, sort });
+
+/** Entry point from outside the catalog — the navigation, the footer, the room
+ *  panels on the home page. A room is not a page of its own: it is the catalog
+ *  narrowed to one `ambiente`, so every one of those links lands here already
+ *  filtered. */
+export const environmentHref = (slug: string) =>
+  serialize({ ...emptyQuery, environments: [slug] });
 
 /** Clearing keeps the sort: it is how the visitor is reading, not what they
  *  are looking at. */
@@ -413,6 +498,8 @@ export function clearFacetHref(query: CatalogQuery, key: FacetKey): string {
       return serialize({ ...query, price: null });
     case "entrega":
       return serialize({ ...query, availability: [] });
+    case "busca":
+      return serialize({ ...query, search: "" });
   }
 }
 
@@ -460,6 +547,9 @@ const rowNotes: Record<FacetKey, string> = {
   acabamento: "neste acabamento",
   preco: "nesta faixa",
   entrega: "nesta condição",
+  /* Never rendered — `busca` has no ledger — but the record is exhaustive so
+     that adding a facet without a note is a type error rather than a blank. */
+  busca: "nesta busca",
 };
 
 function buildGroup(
@@ -586,6 +676,7 @@ export function suggestLoosening(query: CatalogQuery): Loosening | null {
     { key: "acabamento", label: "acabamento", active: query.materials.length > 0 },
     { key: "preco", label: "preço", active: query.price !== null },
     { key: "entrega", label: "entrega", active: query.availability.length > 0 },
+    { key: "busca", label: "busca", active: query.search !== "" },
   ];
 
   const candidates = groups

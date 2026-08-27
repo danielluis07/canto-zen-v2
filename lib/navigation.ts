@@ -1,4 +1,5 @@
 import { enviroments } from "@/data/enviroments";
+import { environmentHref } from "@/lib/catalog-filters";
 
 export type NavLink = {
   href: string;
@@ -16,7 +17,7 @@ export type EnvironmentNavLink = NavLink & {
  */
 export const environmentLinks: EnvironmentNavLink[] = enviroments.map(
   (environment) => ({
-    href: `/ambientes/${environment.slug}`,
+    href: environmentHref(environment.slug),
     label: environment.label,
     categoryCount: environment.types.length,
   }),

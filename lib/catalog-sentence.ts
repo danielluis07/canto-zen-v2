@@ -94,7 +94,7 @@ export function censusSentence(query: CatalogQuery, count: number): string {
   const band = priceBands.find((entry) => entry.slug === query.price);
   if (band) clauses.push(band.phrase);
 
-  const sentence = [head, ...clauses].join(" ");
+  let sentence = [head, ...clauses].join(" ");
 
   /* Delivery closes the sentence behind a comma — it qualifies the whole set
      rather than describing the pieces. */
@@ -105,7 +105,16 @@ export function censusSentence(query: CatalogQuery, count: number): string {
         .map((option) => option.phrase),
       "ou",
     );
-    return `${sentence}, ${promises}.`;
+    sentence = `${sentence}, ${promises}`;
+  }
+
+  /* What was typed is quoted back last and verbatim, so the visitor can see
+     their own words in the reading and tell a spelling mistake from an empty
+     shelf. */
+  if (query.search) {
+    /* "na busca por", not "para" — the room clause already spends that
+       preposition, and "para a sala, para 'linho'" reads as a stutter. */
+    sentence = `${sentence}, na busca por “${query.search}”`;
   }
 
   return `${sentence}.`;

@@ -29,8 +29,10 @@ export function CatalogEmpty({
       <div className="mt-8">
         {loosening ? (
           <TextLink href={loosening.href}>
-            Sem o filtro de {loosening.label} · {loosening.count}{" "}
-            {loosening.count === 1 ? "peça" : "peças"}
+            {loosening.key === "busca"
+              ? "Sem a busca"
+              : `Sem o filtro de ${loosening.label}`}{" "}
+            · {loosening.count} {loosening.count === 1 ? "peça" : "peças"}
           </TextLink>
         ) : (
           <TextLink href={clearHref(query)}>Limpar filtros</TextLink>
