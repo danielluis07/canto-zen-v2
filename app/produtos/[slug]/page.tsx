@@ -108,6 +108,7 @@ export default async function ProductPage(
 
   const prices = resolvePrices(product);
   const isSoldOut = product.availability === "out-of-stock";
+  const isReadyToShip = product.availability === "immediate-shipment";
 
   const measurements: LedgerRow[] = product.extraMeasurements.map((entry) => ({
     label: entry.label,
@@ -195,7 +196,7 @@ export default async function ProductPage(
                   action and goes disabled; the status is stated here, once. */}
               <AvailabilityTag
                 label={formatAvailability(product)}
-                isSoldOut={isSoldOut}
+                isReadyToShip={isReadyToShip}
               />
             </div>
 

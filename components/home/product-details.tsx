@@ -59,23 +59,25 @@ export function ProductPrice({
   );
 }
 
-/** Sage for a promise the store can keep; stone for one it cannot. Stone is
- *  used at full strength: the colour change is already the whole signal, and
- *  fading it as well put the tag under the contrast floor. */
+/** Sage for a promise the store can keep — pronta entrega, and only pronta
+ *  entrega; sob encomenda and esgotado are both promises it cannot keep today,
+ *  so both take stone. Stone is used at full strength: the colour change is
+ *  already the whole signal, and fading it as well put the tag under the
+ *  contrast floor. */
 export function AvailabilityTag({
   label,
-  isSoldOut,
+  isReadyToShip,
   className,
 }: {
   label: string;
-  isSoldOut: boolean;
+  isReadyToShip: boolean;
   className?: string;
 }) {
   return (
     <p
       className={cn(
         "text-[0.625rem] tracking-[0.14em] uppercase",
-        isSoldOut ? "text-muted-foreground" : "text-sage-deep",
+        isReadyToShip ? "text-sage-deep" : "text-muted-foreground",
         className,
       )}>
       {label}

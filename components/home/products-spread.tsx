@@ -18,8 +18,14 @@ export type SpreadItem = {
 };
 
 function ProductPlate({ product, label }: SpreadItem) {
-  const { image, measurements, prices, availability, isSoldOut, rulerWidth } =
-    getProductFacts(product);
+  const {
+    image,
+    measurements,
+    prices,
+    availability,
+    isReadyToShip,
+    rulerWidth,
+  } = getProductFacts(product);
 
   return (
     <li className="relative border-t border-line pt-9 lg:pt-11">
@@ -70,7 +76,10 @@ function ProductPlate({ product, label }: SpreadItem) {
               two things a ledger line has to answer, at opposite ends of it. */}
           <div className="mt-5 flex flex-wrap items-baseline justify-between gap-x-6 gap-y-1 border-t border-line pt-3.5">
             <ProductPrice current={prices.current} previous={prices.previous} />
-            <AvailabilityTag label={availability} isSoldOut={isSoldOut} />
+            <AvailabilityTag
+              label={availability}
+              isReadyToShip={isReadyToShip}
+            />
           </div>
         </div>
       </Link>

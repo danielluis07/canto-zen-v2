@@ -49,7 +49,7 @@ export function CitedPieces({
 
       <ul className="rise mt-12 border-b border-line lg:mt-16">
         {pieces.map((piece) => {
-          const { measurements, prices, availability, isSoldOut } =
+          const { measurements, prices, availability, isReadyToShip } =
             getProductFacts(piece);
 
           return (
@@ -88,7 +88,7 @@ export function CitedPieces({
 
                   <AvailabilityTag
                     label={availability}
-                    isSoldOut={isSoldOut}
+                    isReadyToShip={isReadyToShip}
                     className="text-right"
                   />
                 </div>

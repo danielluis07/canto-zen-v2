@@ -36,6 +36,7 @@ export type BagItem = {
   measurements: string | null;
   availability: string;
   isSoldOut: boolean;
+  isReadyToShip: boolean;
   unitPrice: number;
   /** The struck figure, when the piece is marked down. */
   previousUnitPrice?: number;
@@ -65,6 +66,7 @@ export function resolveBag(lines: BagLine[]): BagItem[] {
         measurements: formatMeasurements(getFamily(product.family)),
         availability: formatAvailability(product),
         isSoldOut: product.availability === "out-of-stock",
+        isReadyToShip: product.availability === "immediate-shipment",
         unitPrice: prices.current,
         previousUnitPrice: prices.previous,
         lineTotal: prices.current * line.quantity,

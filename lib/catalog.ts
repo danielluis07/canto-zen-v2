@@ -74,6 +74,7 @@ export function getProductFacts(product: Product) {
     prices: resolvePrices(product),
     availability: formatAvailability(product),
     isSoldOut: product.availability === "out-of-stock",
+    isReadyToShip: product.availability === "immediate-shipment",
     /* The photograph only carries a ruler when its data declares a width cota
        and the family actually has that measurement on file. */
     rulerWidth:

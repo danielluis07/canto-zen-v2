@@ -66,7 +66,7 @@ function Quantity({ item }: { item: BagItem }) {
  */
 export function BagLine({ item }: { item: BagItem }) {
   const remove = useBag((state) => state.remove);
-  const { product, image, measurements, availability, isSoldOut } = item;
+  const { product, image, measurements, availability, isReadyToShip } = item;
 
   return (
     <li className="grid grid-cols-[6rem_1fr] gap-x-5 gap-y-5 border-t border-line py-7 sm:grid-cols-[7rem_1fr] sm:gap-x-7 lg:py-8">
@@ -119,7 +119,7 @@ export function BagLine({ item }: { item: BagItem }) {
 
         <AvailabilityTag
           label={availability}
-          isSoldOut={isSoldOut}
+          isReadyToShip={isReadyToShip}
           className="mt-2.5"
         />
 

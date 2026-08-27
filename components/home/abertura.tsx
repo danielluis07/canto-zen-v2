@@ -13,7 +13,7 @@ import { LinkButton, TextLink } from "@/components/ui/link-button";
 export function Hero() {
   return (
     <section className="relative overflow-hidden border-b border-line">
-      <div className="hero-media absolute inset-x-0 -top-[20%] h-[120%]">
+      <div className="hero-media absolute inset-x-0 -top-[20%] h-[120%] bg-secondary">
         <Image
           src={heroImage}
           alt="Sala de estar em luz natural, com sofá de linho cru, poltronas de couro trançado e mesa de centro em madeira maciça"
@@ -38,17 +38,10 @@ export function Hero() {
       />
 
       <div className="relative mx-auto flex h-[calc(100svh-4rem)] max-h-[46rem] min-h-[33rem] w-full max-w-360 flex-col justify-center px-6 lg:h-[calc(100svh-5rem)] lg:px-10">
-        <p
-          className="hero-line text-[0.6875rem] font-medium tracking-[0.18em] text-muted-foreground uppercase"
-          style={{ "--enter-delay": "60ms" } as React.CSSProperties}>
-          Marcenaria própria · São Paulo
-        </p>
-
         <h1
           className="hero-line mt-6 max-w-[15ch] font-heading text-[clamp(2.5rem,6.4vw,4.75rem)] leading-[1.02] font-light tracking-[-0.02em] text-balance"
           style={{ "--enter-delay": "140ms" } as React.CSSProperties}>
-          Móveis de madeira maciça, feitos{" "}
-          <span className="italic">sob encomenda</span>.
+          Móveis de madeira maciça, feitos sob encomenda.
         </h1>
 
         <p
@@ -62,7 +55,6 @@ export function Hero() {
           className="hero-line mt-11 flex flex-wrap items-center gap-x-10 gap-y-5"
           style={{ "--enter-delay": "320ms" } as React.CSSProperties}>
           <LinkButton href="/produtos">Ver os móveis</LinkButton>
-          <TextLink href="/materiais">Materiais e cuidados</TextLink>
         </div>
       </div>
 

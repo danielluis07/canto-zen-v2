@@ -32,6 +32,7 @@ function FinishBody({
   showAvailability,
 }: FinishSibling & { showPrice: boolean; showAvailability: boolean }) {
   const isSoldOut = product.availability === "out-of-stock";
+  const isReadyToShip = product.availability === "immediate-shipment";
 
   return (
     <>
@@ -52,7 +53,7 @@ function FinishBody({
           <span
             className={cn(
               "mt-1.5 block text-[0.625rem] font-medium tracking-[0.14em] uppercase",
-              isSoldOut ? "text-muted-foreground" : "text-sage-deep",
+              isReadyToShip ? "text-sage-deep" : "text-muted-foreground",
             )}>
             {formatAvailability(product)}
           </span>

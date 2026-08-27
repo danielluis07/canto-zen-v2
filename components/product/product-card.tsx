@@ -30,8 +30,14 @@ export function ProductCard({
   priority?: boolean;
   className?: string;
 }) {
-  const { image, measurements, prices, availability, isSoldOut, rulerWidth } =
-    getProductFacts(product);
+  const {
+    image,
+    measurements,
+    prices,
+    availability,
+    isReadyToShip,
+    rulerWidth,
+  } = getProductFacts(product);
 
   return (
     /* `relative` is load-bearing: it gives the sr-only spans below a containing
@@ -86,7 +92,7 @@ export function ProductCard({
             <ProductPrice current={prices.current} previous={prices.previous} />
             <AvailabilityTag
               label={availability}
-              isSoldOut={isSoldOut}
+              isReadyToShip={isReadyToShip}
               className="@min-[17rem]:shrink-0"
             />
           </div>
