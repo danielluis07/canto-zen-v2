@@ -6,6 +6,7 @@ import { ProductsRow } from "@/components/home/products-row";
 import { ProductsSpread } from "@/components/home/products-spread";
 import { colecoes } from "@/data";
 import { getAnchorsByEnvironment, getReadyToShip } from "@/lib/catalog";
+import { availabilityHref } from "@/lib/catalog-filters";
 
 export default function Home() {
   const readyToShip = getReadyToShip();
@@ -23,7 +24,10 @@ export default function Home() {
         title="Disponível agora"
         note="Peças prontas em estoque, sem prazo de produção."
         products={readyToShip}
-        action={{ href: "/produtos", label: "Ver todos os móveis" }}
+        action={{
+          href: availabilityHref("pronta-entrega"),
+          label: "Ver tudo em pronta entrega",
+        }}
       />
 
       <Collection collection={featuredCollection} />
@@ -33,7 +37,6 @@ export default function Home() {
         title="A peça que define o cômodo"
         note="A maior superfície do ambiente decide a escala de tudo o que entra depois. Escolha essa primeiro."
         items={anchors}
-        action={{ href: "/produtos", label: "Ver todos os móveis" }}
       />
 
       <Journal />

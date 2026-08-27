@@ -481,6 +481,12 @@ export const sortHref = (query: CatalogQuery, sort: SortSlug) =>
 export const environmentHref = (slug: string) =>
   serialize({ ...emptyQuery, environments: [slug] });
 
+/** Entry point from outside the catalog for the delivery facet — the home
+ *  page's "Pronta entrega" exit lands here already narrowed to `entrega`,
+ *  rather than on the bare catalog index. */
+export const availabilityHref = (slug: string) =>
+  serialize({ ...emptyQuery, availability: [slug] });
+
 /** Clearing keeps the sort: it is how the visitor is reading, not what they
  *  are looking at. */
 export const clearHref = (query: CatalogQuery) =>
