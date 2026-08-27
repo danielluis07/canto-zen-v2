@@ -68,7 +68,7 @@ export function Hero() {
 
       {/* A catalogue plate names what is in the picture. Kept off small screens,
           where the crop no longer shows every piece it lists. */}
-      <p className="absolute right-10 bottom-7 hidden border-t border-foreground/20 pt-2.5 text-right text-[0.625rem] leading-none tracking-[0.12em] text-foreground/65 uppercase lg:block">
+      <p className="absolute right-10 bottom-7 hidden rounded-xs border-t border-foreground/20 bg-background/85 px-1.5 py-0.5 text-right text-[0.625rem] leading-none tracking-[0.12em] text-foreground/65 uppercase lg:block">
         Sofá Héron em linho cru · Poltrona Lina · Mesa de centro Seixo em freijó
       </p>
     </section>
