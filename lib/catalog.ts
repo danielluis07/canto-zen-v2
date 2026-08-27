@@ -38,16 +38,22 @@ export function getReadyToShip(limit = 4): Product[] {
 }
 
 /** One piece per room, in room order — the anchor piece each cômodo is built
- *  around, taken as the first of its room in the catalog's own ordering. The
- *  room label travels with it, since it is what makes the set cohere. */
+ *  around, taken as the first of its room in the catalog's own ordering, but
+ *  preferring one whose family declares a width so the anchor can state its
+ *  scale. Falls back to the plain first-in-order piece when none in the room
+ *  have a width on file. */
 export function getAnchorsByEnvironment(): {
   product: Product;
   label: string;
 }[] {
   return enviroments.flatMap((environment) => {
-    const anchor = products
+    const roomProducts = products
       .filter((product) => product.mainEnvironment === environment.slug)
-      .sort(byOrder)[0];
+      .sort(byOrder);
+
+    const anchor =
+      roomProducts.find((product) => getFamily(product.family)?.measurements.width) ??
+      roomProducts[0];
 
     return anchor ? [{ product: anchor, label: environment.label }] : [];
   });
