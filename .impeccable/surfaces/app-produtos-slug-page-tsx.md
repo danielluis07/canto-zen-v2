@@ -15,7 +15,7 @@ A Brazilian household comparing solid-wood pieces before a large purchase. They 
 
 ## Action
 
-`Adicionar à sacola` — a real, fully-designed solid control that is currently wired to nothing (the bag is not implemented). It is enabled on available pieces and genuinely `disabled` with the label `Peça esgotada` on out-of-stock ones. **No "em breve" note**: the user declined that explicitly. When the bag lands, this control is the only thing that needs a handler.
+`Adicionar à sacola` — a real, fully-designed solid control, now wired to the bag (`lib/bag.ts`, zustand over localStorage). It is enabled on available pieces and genuinely `disabled` on out-of-stock ones. **No "em breve" note**: the user declined that explicitly. The label never changes, on success either — confirmation is the fact printed under the control (`N na sacola · Ver a sacola`), announced politely.
 
 ## Proof and content
 

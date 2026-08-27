@@ -1,6 +1,7 @@
-import { ShoppingBag, User } from "lucide-react";
+import { User } from "lucide-react";
 import Link from "next/link";
 
+import { BagLink } from "@/components/bag/bag-link";
 import { MobileNav } from "@/components/layout/mobile-nav";
 import { NavLinks } from "@/components/layout/nav-links";
 import { Wordmark } from "@/components/layout/wordmark";
@@ -14,7 +15,7 @@ const iconActionClassName =
  * translucent rather than opaque so page content stays visible as it passes
  * under it, which keeps the catalog, not the chrome, in charge of the screen.
  */
-export function Navbar({ cartCount = 0 }: { cartCount?: number }) {
+export function Navbar() {
   return (
     <header className="sticky top-0 z-50 border-b border-line bg-background/85 backdrop-blur-md">
       <a
@@ -41,23 +42,7 @@ export function Navbar({ cartCount = 0 }: { cartCount?: number }) {
             <User className="size-[1.15rem]" strokeWidth={1.5} />
           </Link>
 
-          <Link
-            href="/sacola"
-            aria-label={
-              cartCount > 0
-                ? `Sacola, ${cartCount} itens`
-                : "Sacola, nenhum item"
-            }
-            className={iconActionClassName}>
-            <ShoppingBag className="size-[1.15rem]" strokeWidth={1.5} />
-            {cartCount > 0 && (
-              <span
-                aria-hidden
-                className="absolute top-1 right-1 min-w-4 rounded-xs bg-oak-deep px-1 text-center text-[0.625rem] leading-4 font-medium text-background">
-                {cartCount}
-              </span>
-            )}
-          </Link>
+          <BagLink className={iconActionClassName} />
 
           <MobileNav environments={environmentLinks} />
         </div>

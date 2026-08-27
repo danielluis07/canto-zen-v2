@@ -1,5 +1,7 @@
 import { ShieldCheck, Sprout, Truck } from "lucide-react";
 
+import { formatPrice } from "@/lib/format";
+
 /**
  * What the store promises, stated in one place.
  *
@@ -18,8 +20,17 @@ export const warrantyClaim = `Garantia de ${warrantyYears} anos na estrutura`;
 /** Months, for the day a product carries its own `warrantyMonths`. */
 export const warrantyMonths = warrantyYears * 12;
 
+/**
+ * In centavos, like every other price on the site. The bag measures its
+ * subtotal against this figure and the footer prints it, so the number the
+ * visitor is promised and the number the bag tests are the same number.
+ */
+export const freeShippingThreshold = 120000;
+
+export const freeShippingClaim = `Frete grátis para o Sudeste acima de ${formatPrice(freeShippingThreshold)}`;
+
 export const storeCommitments = [
   { icon: Sprout, text: "Madeira maciça de manejo certificado FSC" },
   { icon: ShieldCheck, text: warrantyClaim },
-  { icon: Truck, text: "Frete grátis para o Sudeste acima de R$ 1.200" },
+  { icon: Truck, text: freeShippingClaim },
 ];

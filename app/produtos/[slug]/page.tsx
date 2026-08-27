@@ -200,7 +200,7 @@ export default async function ProductPage(
             </div>
 
             <div className="mt-7">
-              <BagControl isSoldOut={isSoldOut} />
+              <BagControl slug={product.slug} isSoldOut={isSoldOut} />
             </div>
 
             <PieceCommitments
