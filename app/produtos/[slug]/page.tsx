@@ -17,6 +17,7 @@ import {
 } from "@/components/product/piece-frames";
 import { TextLink } from "@/components/ui/link-button";
 import { getMainImage } from "@/lib/catalog";
+import { roomPhrases } from "@/lib/catalog-sentence";
 import { formatAvailability, formatPrice, resolvePrices } from "@/lib/format";
 import {
   environmentHref,
@@ -295,13 +296,13 @@ export default async function ProductPage(
           /* The eyebrow states the size of the room's catalog — a fact the
              title does not carry. An eyebrow that paraphrases its own heading
              is the heading said twice. */
-          eyebrow={`${roomCount} peças na ${environment.label.toLowerCase()}`}
-          title={`Outras peças para a ${environment.label.toLowerCase()}`}
+          eyebrow={`${roomCount} peças ${roomPhrases(environment).inRoom}`}
+          title={`Outras peças ${roomPhrases(environment).forRoom}`}
           note={environment.description}
           products={related}
           action={{
             href: environmentHref(environment.slug),
-            label: `Ver a ${environment.label.toLowerCase()} inteira`,
+            label: `Ver ${roomPhrases(environment).wholeRoom}`,
           }}
         />
       )}

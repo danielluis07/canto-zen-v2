@@ -3,7 +3,13 @@ import { enviroments } from "@/data/enviroments";
 import { products, productTypes } from "@/data/products";
 import { getFamily, getMainImage } from "@/lib/catalog";
 import { finishMaterials } from "@/lib/catalog-filters";
-import type { Article, Collection, Material, Product } from "@/types";
+import type {
+  Article,
+  ArticlePhoto,
+  Collection,
+  Material,
+  Product,
+} from "@/types";
 
 const productBySlug = new Map(products.map((product) => [product.slug, product]));
 const typeBySlug = new Map(productTypes.map((type) => [type.slug, type]));
@@ -70,10 +76,13 @@ export function getFinishes(product: Product): FinishSibling[] {
  *  travels with it: it is the one that actually shows this piece. */
 export function getArticleFeaturing(
   product: Product,
-): { article: Article; photo: Article["fotos"][number] } | null {
+): { article: Article; photo: ArticlePhoto } | null {
   for (const article of artigos) {
-    const photo = article.fotos.find((foto) => foto.pecas.includes(product.slug));
-    if (photo) return { article, photo };
+    for (const part of article.partes) {
+      if (part.foto.pecas.includes(product.slug)) {
+        return { article, photo: part.foto };
+      }
+    }
   }
 
   return null;

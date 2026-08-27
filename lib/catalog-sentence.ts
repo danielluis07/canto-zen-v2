@@ -19,12 +19,32 @@ import {
  */
 
 /** Rooms carry their article, since "para sala" is not Portuguese. */
-const environmentArticles: Record<string, string> = {
+const environmentArticles: Record<string, "a" | "o"> = {
   sala: "a",
   quarto: "o",
   cozinha: "a",
   escritorio: "o",
 };
+
+/**
+ * The room's phrases, agreed. Portuguese inflects the article and the
+ * adjective with the noun, and the four cômodos split two feminine and two
+ * masculine — so a template that hard-codes "a" is wrong half the catalog.
+ * Stated once here rather than at each heading that names a room.
+ */
+export function roomPhrases(environment: { slug: string; label: string }) {
+  const article = environmentArticles[environment.slug] ?? "o";
+  const label = environment.label.toLowerCase();
+
+  return {
+    /** "na sala" · "no escritório" */
+    inRoom: `n${article} ${label}`,
+    /** "para a sala" · "para o escritório" */
+    forRoom: `para ${article} ${label}`,
+    /** "a sala inteira" · "o escritório inteiro" */
+    wholeRoom: `${article} ${label} inteir${article}`,
+  };
+}
 
 /** "a", "a e b", "a, b e c" — the Portuguese list, without the serial comma. */
 function joinList(items: string[], conjunction = "e"): string {

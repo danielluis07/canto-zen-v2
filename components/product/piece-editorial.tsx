@@ -7,7 +7,7 @@ import { articleHref } from "@/lib/journal";
 import { getProduct } from "@/lib/product-page";
 import { productHref } from "@/lib/catalog";
 import { cn } from "@/lib/utils";
-import type { Article, Product } from "@/types";
+import type { Article, ArticlePhoto, Product } from "@/types";
 
 /**
  * The Diário names the pieces in its photographs by slug, so a piece can find
@@ -21,7 +21,7 @@ export function PieceEditorial({
   product,
 }: {
   article: Article;
-  photo: Article["fotos"][number];
+  photo: ArticlePhoto;
   product: Product;
 }) {
   const href = articleHref(article.slug);
