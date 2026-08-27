@@ -1,4 +1,4 @@
-import { unsplash } from "@/lib/utils";
+// import { unsplash } from "@/lib/utils"; // only used by the commented-out placeholders below
 import type { Product, ProductTypes } from "@/types";
 
 export const productTypes: ProductTypes[] = [
@@ -1457,7 +1457,7 @@ export const products: Product[] = [
     productionWeeks: 7,
     images: [
       {
-        src: unsplash("1616594039964-ae9021a400a0"),
+        src: "/images/products/armario-cais-carvalho.webp",
         alt: "Armário Cais em carvalho sobre reboco",
         role: "main",
         dimensions: [],
@@ -1487,7 +1487,7 @@ export const products: Product[] = [
     productionWeeks: 6,
     images: [
       {
-        src: unsplash("1631049307264-da0ec9d70304"),
+        src: "/images/products/armario-ripado-freijo.webp",
         alt: "Armário Ripado em freijó sobre reboco",
         role: "main",
         dimensions: [],
@@ -1517,7 +1517,7 @@ export const products: Product[] = [
     availability: "immediate-shipment",
     images: [
       {
-        src: unsplash("1558211583-d26f610c1eb1"),
+        src: "/images/products/armario-bruma-off-white.webp",
         alt: "Armário Bruma em laca off-white sobre reboco",
         role: "main",
         dimensions: [],
@@ -1528,440 +1528,440 @@ export const products: Product[] = [
   },
 
   // §3.3 row 51
-  {
-    slug: "carrinho-roldana-aco-carvao",
-    name: "Carrinho Roldana",
-    family: "carrinho-roldana",
-    finish: "Aço Carvão",
-    type: "carrinhos-e-apoios",
-    mainEnvironment: "cozinha",
-    environments: ["cozinha"],
-    collections: [],
-    order: 51,
-    tablePrice: 210000,
-    extraMeasurements: [],
-    availability: "immediate-shipment",
-    images: [
-      {
-        src: unsplash("1513506003901-1e6a229e2d15"),
-        alt: "Carrinho Roldana em aço carvão sobre reboco",
-        role: "main",
-        dimensions: [],
-      },
-    ],
-    description:
-      "Um carrinho de duas prateleiras em aço carvão, para levar louça, garrafas ou o café da manhã de um cômodo a outro. As rodas são de borracha maciça com trava em duas delas, o que basta para a peça ficar parada quando a bancada dela vira mesa. Guarda-se ao lado da geladeira, na folga que sempre sobra ali.",
-  },
+  // {
+  //   slug: "carrinho-roldana-aco-carvao",
+  //   name: "Carrinho Roldana",
+  //   family: "carrinho-roldana",
+  //   finish: "Aço Carvão",
+  //   type: "carrinhos-e-apoios",
+  //   mainEnvironment: "cozinha",
+  //   environments: ["cozinha"],
+  //   collections: [],
+  //   order: 51,
+  //   tablePrice: 210000,
+  //   extraMeasurements: [],
+  //   availability: "immediate-shipment",
+  //   images: [
+  //     {
+  //       src: unsplash("1513506003901-1e6a229e2d15"),
+  //       alt: "Carrinho Roldana em aço carvão sobre reboco",
+  //       role: "main",
+  //       dimensions: [],
+  //     },
+  //   ],
+  //   description:
+  //     "Um carrinho de duas prateleiras em aço carvão, para levar louça, garrafas ou o café da manhã de um cômodo a outro. As rodas são de borracha maciça com trava em duas delas, o que basta para a peça ficar parada quando a bancada dela vira mesa. Guarda-se ao lado da geladeira, na folga que sempre sobra ali.",
+  // },
 
   // §3.3 row 52
-  {
-    slug: "carrinho-junco-rattan-cru",
-    name: "Carrinho Junco",
-    family: "carrinho-junco",
-    finish: "Rattan Cru",
-    type: "carrinhos-e-apoios",
-    mainEnvironment: "cozinha",
-    environments: ["cozinha"],
-    collections: [],
-    order: 52,
-    tablePrice: 174000,
-    extraMeasurements: [],
-    availability: "immediate-shipment",
-    images: [
-      {
-        src: unsplash("1522708323590-d24dbb6b0267"),
-        alt: "Carrinho Junco em rattan cru sobre reboco",
-        role: "main",
-        dimensions: [],
-      },
-    ],
-    description:
-      "Um carrinho leve de duas prateleiras em rattan cru sobre estrutura em carvalho, para frutas, pães e o que fica à mão. As prateleiras são trançadas em trama aberta, que escoa migalha e deixa a fruta respirar em vez de suar sobre superfície fechada. Fica perto da janela, onde a luz atravessa a trama e desenha no chão.",
-  },
+  // {
+  //   slug: "carrinho-junco-rattan-cru",
+  //   name: "Carrinho Junco",
+  //   family: "carrinho-junco",
+  //   finish: "Rattan Cru",
+  //   type: "carrinhos-e-apoios",
+  //   mainEnvironment: "cozinha",
+  //   environments: ["cozinha"],
+  //   collections: [],
+  //   order: 52,
+  //   tablePrice: 174000,
+  //   extraMeasurements: [],
+  //   availability: "immediate-shipment",
+  //   images: [
+  //     {
+  //       src: unsplash("1522708323590-d24dbb6b0267"),
+  //       alt: "Carrinho Junco em rattan cru sobre reboco",
+  //       role: "main",
+  //       dimensions: [],
+  //     },
+  //   ],
+  //   description:
+  //     "Um carrinho leve de duas prateleiras em rattan cru sobre estrutura em carvalho, para frutas, pães e o que fica à mão. As prateleiras são trançadas em trama aberta, que escoa migalha e deixa a fruta respirar em vez de suar sobre superfície fechada. Fica perto da janela, onde a luz atravessa a trama e desenha no chão.",
+  // },
 
   // §3.3 row 53 — cross-listed to sala, §3.6
-  {
-    slug: "mesa-de-apoio-luar-marmore-cru",
-    name: "Mesa de Apoio Luar",
-    family: "mesa-de-apoio-luar",
-    finish: "Mármore Cru",
-    type: "carrinhos-e-apoios",
-    mainEnvironment: "cozinha",
-    environments: ["cozinha", "sala"],
-    collections: [],
-    order: 53,
-    tablePrice: 268000,
-    extraMeasurements: [],
-    availability: "made-to-order",
-    productionWeeks: 5,
-    images: [
-      {
-        src: unsplash("1611967164521-abae8fba4668"),
-        alt: "Mesa de Apoio Luar em mármore cru sobre reboco",
-        role: "main",
-        dimensions: [],
-      },
-    ],
-    description:
-      "Uma mesa de apoio com tampo em mármore cru sobre coluna e base em carvalho, alta o bastante para servir ao lado de quem está sentado. O tampo é rebaixado no verso e encaixa na coluna por espiga, junta que dispensa cola e deixa a pedra assentar pelo próprio peso. Serve à cozinha ao lado da poltrona de leitura e à sala com a mesma naturalidade.",
-  },
+  // {
+  //   slug: "mesa-de-apoio-luar-marmore-cru",
+  //   name: "Mesa de Apoio Luar",
+  //   family: "mesa-de-apoio-luar",
+  //   finish: "Mármore Cru",
+  //   type: "carrinhos-e-apoios",
+  //   mainEnvironment: "cozinha",
+  //   environments: ["cozinha", "sala"],
+  //   collections: [],
+  //   order: 53,
+  //   tablePrice: 268000,
+  //   extraMeasurements: [],
+  //   availability: "made-to-order",
+  //   productionWeeks: 5,
+  //   images: [
+  //     {
+  //       src: unsplash("1611967164521-abae8fba4668"),
+  //       alt: "Mesa de Apoio Luar em mármore cru sobre reboco",
+  //       role: "main",
+  //       dimensions: [],
+  //     },
+  //   ],
+  //   description:
+  //     "Uma mesa de apoio com tampo em mármore cru sobre coluna e base em carvalho, alta o bastante para servir ao lado de quem está sentado. O tampo é rebaixado no verso e encaixa na coluna por espiga, junta que dispensa cola e deixa a pedra assentar pelo próprio peso. Serve à cozinha ao lado da poltrona de leitura e à sala com a mesma naturalidade.",
+  // },
 
   // §3.4 row 54 — the room's full-coverage piece: all three papéis, and the
   // only cota Escritório spends (§7.2, §7.3). It opens the Escritório article.
-  {
-    slug: "escrivaninha-cais-carvalho",
-    name: "Escrivaninha Cais",
-    family: "escrivaninha-cais",
-    finish: "Carvalho",
-    type: "escrivaninhas",
-    mainEnvironment: "escritorio",
-    environments: ["escritorio"],
-    collections: [],
-    order: 54,
-    tablePrice: 590000,
-    // §8.3's table assigns `escrivaninhas` no rows, so the tipo renders the
-    // empty Medidas case — see the note in `derivacoes.ts`.
-    extraMeasurements: [],
-    availability: "made-to-order",
-    productionWeeks: 6,
-    images: [
-      {
-        src: unsplash("1524758631624-e2822e304c36"),
-        alt: "Escrivaninha Cais em carvalho sobre reboco",
-        role: "main",
-        dimensions: ["width"],
-      },
-      {
-        src: unsplash("1567016432779-094069958ea5"),
-        alt: "Escrivaninha Cais em Escritório",
-        role: "environment",
-        dimensions: [],
-      },
-      {
-        src: unsplash("1592078615290-033ee584e267"),
-        alt: "O gaveteiro de três gavetas e o vão livre ao lado",
-        role: "detail",
-        dimensions: [],
-      },
-    ],
-    description:
-      "Uma escrivaninha de tampo largo em carvalho maciço, com gaveteiro de três gavetas de um lado e vão livre do outro. O tampo é montado em réguas coladas alternando o sentido do veio, o que impede a peça de empenar quando o cômodo seca. Encosta na parede ou fica solta no meio do escritório, porque o verso é acabado igual à frente.",
-  },
+  // {
+  //   slug: "escrivaninha-cais-carvalho",
+  //   name: "Escrivaninha Cais",
+  //   family: "escrivaninha-cais",
+  //   finish: "Carvalho",
+  //   type: "escrivaninhas",
+  //   mainEnvironment: "escritorio",
+  //   environments: ["escritorio"],
+  //   collections: [],
+  //   order: 54,
+  //   tablePrice: 590000,
+  //   // §8.3's table assigns `escrivaninhas` no rows, so the tipo renders the
+  //   // empty Medidas case — see the note in `derivacoes.ts`.
+  //   extraMeasurements: [],
+  //   availability: "made-to-order",
+  //   productionWeeks: 6,
+  //   images: [
+  //     {
+  //       src: unsplash("1524758631624-e2822e304c36"),
+  //       alt: "Escrivaninha Cais em carvalho sobre reboco",
+  //       role: "main",
+  //       dimensions: ["width"],
+  //     },
+  //     {
+  //       src: unsplash("1567016432779-094069958ea5"),
+  //       alt: "Escrivaninha Cais em Escritório",
+  //       role: "environment",
+  //       dimensions: [],
+  //     },
+  //     {
+  //       src: unsplash("1592078615290-033ee584e267"),
+  //       alt: "O gaveteiro de três gavetas e o vão livre ao lado",
+  //       role: "detail",
+  //       dimensions: [],
+  //     },
+  //   ],
+  //   description:
+  //     "Uma escrivaninha de tampo largo em carvalho maciço, com gaveteiro de três gavetas de um lado e vão livre do outro. O tampo é montado em réguas coladas alternando o sentido do veio, o que impede a peça de empenar quando o cômodo seca. Encosta na parede ou fica solta no meio do escritório, porque o verso é acabado igual à frente.",
+  // },
 
   // §3.4 row 55
-  {
-    slug: "escrivaninha-vau-freijo",
-    name: "Escrivaninha Vau",
-    family: "escrivaninha-vau",
-    finish: "Freijó",
-    type: "escrivaninhas",
-    mainEnvironment: "escritorio",
-    environments: ["escritorio"],
-    collections: [],
-    order: 55,
-    tablePrice: 480000,
-    extraMeasurements: [],
-    availability: "immediate-shipment",
-    images: [
-      {
-        src: unsplash("1595526114035-0d45ed16cfbf"),
-        alt: "Escrivaninha Vau em freijó sobre reboco",
-        role: "main",
-        dimensions: [],
-      },
-    ],
-    description:
-      "Uma escrivaninha leve em freijó, apoiada em dois cavaletes que vencem o vão sem travessa no meio das pernas. As pernas encaixam no travessão por cavilha passante, junta que se aperta com o próprio peso do tampo e dispensa ferragem à vista. Cabe em quarto pequeno, onde uma mesa de trabalho precisa desaparecer quando o dia termina.",
-  },
+  // {
+  //   slug: "escrivaninha-vau-freijo",
+  //   name: "Escrivaninha Vau",
+  //   family: "escrivaninha-vau",
+  //   finish: "Freijó",
+  //   type: "escrivaninhas",
+  //   mainEnvironment: "escritorio",
+  //   environments: ["escritorio"],
+  //   collections: [],
+  //   order: 55,
+  //   tablePrice: 480000,
+  //   extraMeasurements: [],
+  //   availability: "immediate-shipment",
+  //   images: [
+  //     {
+  //       src: unsplash("1595526114035-0d45ed16cfbf"),
+  //       alt: "Escrivaninha Vau em freijó sobre reboco",
+  //       role: "main",
+  //       dimensions: [],
+  //     },
+  //   ],
+  //   description:
+  //     "Uma escrivaninha leve em freijó, apoiada em dois cavaletes que vencem o vão sem travessa no meio das pernas. As pernas encaixam no travessão por cavilha passante, junta que se aperta com o próprio peso do tampo e dispensa ferragem à vista. Cabe em quarto pequeno, onde uma mesa de trabalho precisa desaparecer quando o dia termina.",
+  // },
 
   // §3.4 row 56
-  {
-    slug: "escrivaninha-tramo-aco-carvao",
-    name: "Escrivaninha Tramo",
-    family: "escrivaninha-tramo",
-    finish: "Aço Carvão",
-    type: "escrivaninhas",
-    mainEnvironment: "escritorio",
-    environments: ["escritorio"],
-    collections: [],
-    order: 56,
-    tablePrice: 390000,
-    extraMeasurements: [],
-    availability: "immediate-shipment",
-    images: [
-      {
-        src: unsplash("1513506003901-1e6a229e2d15"),
-        alt: "Escrivaninha Tramo em aço carvão sobre reboco",
-        role: "main",
-        dimensions: [],
-      },
-    ],
-    description:
-      "Uma escrivaninha de estrutura tubular em aço carvão com tampo em carvalho, para quem quer a mesa de trabalho mais estreita que couber. A estrutura é dobrada em tubo contínuo e soldada só nos dois pontos de cruzamento, o que deixa a peça rígida sem ganhar volume. Fica bem contra a janela, onde a pintura fosca não devolve reflexo à tela.",
-  },
+  // {
+  //   slug: "escrivaninha-tramo-aco-carvao",
+  //   name: "Escrivaninha Tramo",
+  //   family: "escrivaninha-tramo",
+  //   finish: "Aço Carvão",
+  //   type: "escrivaninhas",
+  //   mainEnvironment: "escritorio",
+  //   environments: ["escritorio"],
+  //   collections: [],
+  //   order: 56,
+  //   tablePrice: 390000,
+  //   extraMeasurements: [],
+  //   availability: "immediate-shipment",
+  //   images: [
+  //     {
+  //       src: unsplash("1513506003901-1e6a229e2d15"),
+  //       alt: "Escrivaninha Tramo em aço carvão sobre reboco",
+  //       role: "main",
+  //       dimensions: [],
+  //     },
+  //   ],
+  //   description:
+  //     "Uma escrivaninha de estrutura tubular em aço carvão com tampo em carvalho, para quem quer a mesa de trabalho mais estreita que couber. A estrutura é dobrada em tubo contínuo e soldada só nos dois pontos de cruzamento, o que deixa a peça rígida sem ganhar volume. Fica bem contra a janela, onde a pintura fosca não devolve reflexo à tela.",
+  // },
 
   // §3.4 row 57
-  {
-    slug: "cadeira-de-trabalho-orla-couro-argila",
-    name: "Cadeira de Trabalho Orla",
-    family: "cadeira-de-trabalho-orla",
-    finish: "Couro Argila",
-    type: "cadeiras-de-trabalho",
-    mainEnvironment: "escritorio",
-    environments: ["escritorio"],
-    collections: [],
-    order: 57,
-    tablePrice: 420000,
-    extraMeasurements: [
-      { label: "Altura do assento", value: 48, unit: "cm" },
-      { label: "Capacidade de peso", value: 120, unit: "kg" },
-    ],
-    availability: "made-to-order",
-    productionWeeks: 5,
-    images: [
-      {
-        src: unsplash("1503602642458-232111445657"),
-        alt: "Cadeira de Trabalho Orla em couro argila sobre reboco",
-        role: "main",
-        dimensions: [],
-      },
-    ],
-    description:
-      "Uma cadeira de trabalho com assento e encosto em couro argila sobre base giratória, para o expediente que passa das quatro horas sentado. O couro é curtido ao vegetal e costurado sobre espuma de densidade alta, que cede no primeiro mês e depois guarda a forma de quem senta. Fica na escrivaninha e gira para a estante atrás sem que ninguém se levante.",
-  },
+  // {
+  //   slug: "cadeira-de-trabalho-orla-couro-argila",
+  //   name: "Cadeira de Trabalho Orla",
+  //   family: "cadeira-de-trabalho-orla",
+  //   finish: "Couro Argila",
+  //   type: "cadeiras-de-trabalho",
+  //   mainEnvironment: "escritorio",
+  //   environments: ["escritorio"],
+  //   collections: [],
+  //   order: 57,
+  //   tablePrice: 420000,
+  //   extraMeasurements: [
+  //     { label: "Altura do assento", value: 48, unit: "cm" },
+  //     { label: "Capacidade de peso", value: 120, unit: "kg" },
+  //   ],
+  //   availability: "made-to-order",
+  //   productionWeeks: 5,
+  //   images: [
+  //     {
+  //       src: unsplash("1503602642458-232111445657"),
+  //       alt: "Cadeira de Trabalho Orla em couro argila sobre reboco",
+  //       role: "main",
+  //       dimensions: [],
+  //     },
+  //   ],
+  //   description:
+  //     "Uma cadeira de trabalho com assento e encosto em couro argila sobre base giratória, para o expediente que passa das quatro horas sentado. O couro é curtido ao vegetal e costurado sobre espuma de densidade alta, que cede no primeiro mês e depois guarda a forma de quem senta. Fica na escrivaninha e gira para a estante atrás sem que ninguém se levante.",
+  // },
 
   // §3.4 row 58
-  {
-    slug: "cadeira-de-trabalho-junco-palhinha-freijo",
-    name: "Cadeira de Trabalho Junco",
-    family: "cadeira-de-trabalho-junco",
-    finish: "Palhinha e Freijó",
-    type: "cadeiras-de-trabalho",
-    mainEnvironment: "escritorio",
-    environments: ["escritorio"],
-    collections: [],
-    order: 58,
-    tablePrice: 260000,
-    extraMeasurements: [
-      { label: "Altura do assento", value: 44, unit: "cm" },
-      { label: "Capacidade de peso", value: 100, unit: "kg" },
-    ],
-    availability: "immediate-shipment",
-    images: [
-      {
-        src: unsplash("1506439773649-6e0eb8cfb237"),
-        alt: "Cadeira de Trabalho Junco em palhinha e freijó sobre reboco",
-        role: "main",
-        dimensions: [],
-      },
-    ],
-    description:
-      "Uma cadeira de trabalho com assento em palhinha e estrutura em freijó, para a mesa que também é escrivaninha em casa. O assento é trançado sobre caixilho ranhurado e respira, o que muda a temperatura de uma tarde inteira sentado sem que ninguém repare no motivo. Serve ao escritório e volta para a mesa de jantar quando a casa recebe.",
-  },
+  // {
+  //   slug: "cadeira-de-trabalho-junco-palhinha-freijo",
+  //   name: "Cadeira de Trabalho Junco",
+  //   family: "cadeira-de-trabalho-junco",
+  //   finish: "Palhinha e Freijó",
+  //   type: "cadeiras-de-trabalho",
+  //   mainEnvironment: "escritorio",
+  //   environments: ["escritorio"],
+  //   collections: [],
+  //   order: 58,
+  //   tablePrice: 260000,
+  //   extraMeasurements: [
+  //     { label: "Altura do assento", value: 44, unit: "cm" },
+  //     { label: "Capacidade de peso", value: 100, unit: "kg" },
+  //   ],
+  //   availability: "immediate-shipment",
+  //   images: [
+  //     {
+  //       src: unsplash("1506439773649-6e0eb8cfb237"),
+  //       alt: "Cadeira de Trabalho Junco em palhinha e freijó sobre reboco",
+  //       role: "main",
+  //       dimensions: [],
+  //     },
+  //   ],
+  //   description:
+  //     "Uma cadeira de trabalho com assento em palhinha e estrutura em freijó, para a mesa que também é escrivaninha em casa. O assento é trançado sobre caixilho ranhurado e respira, o que muda a temperatura de uma tarde inteira sentado sem que ninguém repare no motivo. Serve ao escritório e volta para a mesa de jantar quando a casa recebe.",
+  // },
 
   // §3.4 row 59
-  {
-    slug: "cadeira-de-trabalho-ripado-carvalho",
-    name: "Cadeira de Trabalho Ripado",
-    family: "cadeira-de-trabalho-ripado",
-    finish: "Carvalho",
-    type: "cadeiras-de-trabalho",
-    mainEnvironment: "escritorio",
-    environments: ["escritorio"],
-    collections: [],
-    order: 59,
-    tablePrice: 310000,
-    extraMeasurements: [
-      { label: "Altura do assento", value: 46, unit: "cm" },
-      { label: "Capacidade de peso", value: 110, unit: "kg" },
-    ],
-    availability: "made-to-order",
-    productionWeeks: 4,
-    images: [
-      {
-        src: unsplash("1586023492125-27b2c045efd7"),
-        alt: "Cadeira de Trabalho Ripado em carvalho sobre reboco",
-        role: "main",
-        dimensions: [],
-      },
-    ],
-    description:
-      "Uma cadeira de trabalho com encosto ripado em carvalho maciço, desenhada para quem escreve à mão e apoia pouco as costas. As ripas são torneadas uma a uma e encaixadas em rasgo, com folga calculada para a madeira trabalhar sem abrir junta no inverno. Fica na escrivaninha e não destoa quando é puxada para a sala numa noite cheia.",
-  },
+  // {
+  //   slug: "cadeira-de-trabalho-ripado-carvalho",
+  //   name: "Cadeira de Trabalho Ripado",
+  //   family: "cadeira-de-trabalho-ripado",
+  //   finish: "Carvalho",
+  //   type: "cadeiras-de-trabalho",
+  //   mainEnvironment: "escritorio",
+  //   environments: ["escritorio"],
+  //   collections: [],
+  //   order: 59,
+  //   tablePrice: 310000,
+  //   extraMeasurements: [
+  //     { label: "Altura do assento", value: 46, unit: "cm" },
+  //     { label: "Capacidade de peso", value: 110, unit: "kg" },
+  //   ],
+  //   availability: "made-to-order",
+  //   productionWeeks: 4,
+  //   images: [
+  //     {
+  //       src: unsplash("1586023492125-27b2c045efd7"),
+  //       alt: "Cadeira de Trabalho Ripado em carvalho sobre reboco",
+  //       role: "main",
+  //       dimensions: [],
+  //     },
+  //   ],
+  //   description:
+  //     "Uma cadeira de trabalho com encosto ripado em carvalho maciço, desenhada para quem escreve à mão e apoia pouco as costas. As ripas são torneadas uma a uma e encaixadas em rasgo, com folga calculada para a madeira trabalhar sem abrir junta no inverno. Fica na escrivaninha e não destoa quando é puxada para a sala numa noite cheia.",
+  // },
 
   // §3.4 row 60
-  {
-    slug: "estante-bruma-freijo",
-    name: "Estante Bruma",
-    family: "estante-bruma",
-    finish: "Freijó",
-    type: "estantes",
-    mainEnvironment: "escritorio",
-    environments: ["escritorio"],
-    collections: [],
-    order: 60,
-    tablePrice: 510000,
-    extraMeasurements: [
-      { label: "Prateleiras", value: 4, unit: "un" },
-      { label: "Capacidade por prateleira", value: 25, unit: "kg" },
-    ],
-    availability: "made-to-order",
-    productionWeeks: 6,
-    images: [
-      {
-        src: unsplash("1594620302200-9a762244a156"),
-        alt: "Estante Bruma em freijó sobre reboco",
-        role: "main",
-        dimensions: [],
-      },
-    ],
-    description:
-      "Uma estante estreita em freijó, de quatro prateleiras, para o canto de parede que sobra ao lado da escrivaninha. As prateleiras correm em rasgo usinado nas laterais e travam por cavilha, de modo que a peça não precisa de fundo para ficar em esquadro. Encosta na parede e some, que é o serviço de uma estante num cômodo pequeno.",
-  },
+  // {
+  //   slug: "estante-bruma-freijo",
+  //   name: "Estante Bruma",
+  //   family: "estante-bruma",
+  //   finish: "Freijó",
+  //   type: "estantes",
+  //   mainEnvironment: "escritorio",
+  //   environments: ["escritorio"],
+  //   collections: [],
+  //   order: 60,
+  //   tablePrice: 510000,
+  //   extraMeasurements: [
+  //     { label: "Prateleiras", value: 4, unit: "un" },
+  //     { label: "Capacidade por prateleira", value: 25, unit: "kg" },
+  //   ],
+  //   availability: "made-to-order",
+  //   productionWeeks: 6,
+  //   images: [
+  //     {
+  //       src: unsplash("1594620302200-9a762244a156"),
+  //       alt: "Estante Bruma em freijó sobre reboco",
+  //       role: "main",
+  //       dimensions: [],
+  //     },
+  //   ],
+  //   description:
+  //     "Uma estante estreita em freijó, de quatro prateleiras, para o canto de parede que sobra ao lado da escrivaninha. As prateleiras correm em rasgo usinado nas laterais e travam por cavilha, de modo que a peça não precisa de fundo para ficar em esquadro. Encosta na parede e some, que é o serviço de uma estante num cômodo pequeno.",
+  // },
 
   // §3.4 row 61
-  {
-    slug: "estante-vargem-carvalho",
-    name: "Estante Vargem",
-    family: "estante-vargem",
-    finish: "Carvalho",
-    type: "estantes",
-    mainEnvironment: "escritorio",
-    environments: ["escritorio"],
-    collections: [],
-    order: 61,
-    tablePrice: 570000,
-    extraMeasurements: [
-      { label: "Prateleiras", value: 5, unit: "un" },
-      { label: "Capacidade por prateleira", value: 30, unit: "kg" },
-    ],
-    availability: "immediate-shipment",
-    images: [
-      {
-        src: unsplash("1558211583-d26f610c1eb1"),
-        alt: "Estante Vargem em carvalho sobre reboco",
-        role: "main",
-        dimensions: [],
-      },
-    ],
-    description:
-      "Uma estante de cinco prateleiras em carvalho maciço, com montante central que divide os vãos e sustenta o peso de livro em fila cheia. As prateleiras têm vinte e cinco milímetros de espessura e vão encaixadas em malhete, junta que segura sem parafuso e não cede com o tempo. Fica atrás da mesa, ao alcance de quem está sentado.",
-  },
+  // {
+  //   slug: "estante-vargem-carvalho",
+  //   name: "Estante Vargem",
+  //   family: "estante-vargem",
+  //   finish: "Carvalho",
+  //   type: "estantes",
+  //   mainEnvironment: "escritorio",
+  //   environments: ["escritorio"],
+  //   collections: [],
+  //   order: 61,
+  //   tablePrice: 570000,
+  //   extraMeasurements: [
+  //     { label: "Prateleiras", value: 5, unit: "un" },
+  //     { label: "Capacidade por prateleira", value: 30, unit: "kg" },
+  //   ],
+  //   availability: "immediate-shipment",
+  //   images: [
+  //     {
+  //       src: unsplash("1558211583-d26f610c1eb1"),
+  //       alt: "Estante Vargem em carvalho sobre reboco",
+  //       role: "main",
+  //       dimensions: [],
+  //     },
+  //   ],
+  //   description:
+  //     "Uma estante de cinco prateleiras em carvalho maciço, com montante central que divide os vãos e sustenta o peso de livro em fila cheia. As prateleiras têm vinte e cinco milímetros de espessura e vão encaixadas em malhete, junta que segura sem parafuso e não cede com o tempo. Fica atrás da mesa, ao alcance de quem está sentado.",
+  // },
 
   // §3.4 row 62 — cross-listed to sala, §3.6, and one of `serra`'s five
-  {
-    slug: "estante-mirante-nogueira",
-    name: "Estante Mirante",
-    family: "estante-mirante",
-    finish: "Nogueira",
-    type: "estantes",
-    mainEnvironment: "escritorio",
-    environments: ["escritorio", "sala"],
-    collections: ["serra"],
-    order: 62,
-    tablePrice: 660000,
-    extraMeasurements: [
-      { label: "Prateleiras", value: 6, unit: "un" },
-      { label: "Capacidade por prateleira", value: 35, unit: "kg" },
-    ],
-    availability: "made-to-order",
-    productionWeeks: 7,
-    images: [
-      {
-        src: unsplash("1594026112284-02bb6f3352fe"),
-        alt: "Estante Mirante em nogueira sobre reboco",
-        role: "main",
-        dimensions: [],
-      },
-    ],
-    description:
-      "Uma estante alta em nogueira, de seis prateleiras em três vãos, para a parede inteira de quem tem mais livro do que espaço. Os montantes atravessam as prateleiras de ponta a ponta e são a única peça estrutural, o que deixa o desenho com uma linha vertical contínua. Serve ao escritório e à sala com o mesmo desembaraço, e ancora as duas.",
-  },
+  // {
+  //   slug: "estante-mirante-nogueira",
+  //   name: "Estante Mirante",
+  //   family: "estante-mirante",
+  //   finish: "Nogueira",
+  //   type: "estantes",
+  //   mainEnvironment: "escritorio",
+  //   environments: ["escritorio", "sala"],
+  //   collections: ["serra"],
+  //   order: 62,
+  //   tablePrice: 660000,
+  //   extraMeasurements: [
+  //     { label: "Prateleiras", value: 6, unit: "un" },
+  //     { label: "Capacidade por prateleira", value: 35, unit: "kg" },
+  //   ],
+  //   availability: "made-to-order",
+  //   productionWeeks: 7,
+  //   images: [
+  //     {
+  //       src: unsplash("1594026112284-02bb6f3352fe"),
+  //       alt: "Estante Mirante em nogueira sobre reboco",
+  //       role: "main",
+  //       dimensions: [],
+  //     },
+  //   ],
+  //   description:
+  //     "Uma estante alta em nogueira, de seis prateleiras em três vãos, para a parede inteira de quem tem mais livro do que espaço. Os montantes atravessam as prateleiras de ponta a ponta e são a única peça estrutural, o que deixa o desenho com uma linha vertical contínua. Serve ao escritório e à sala com o mesmo desembaraço, e ancora as duas.",
+  // },
 
   // §3.4 row 63 — the third esgotado, §3.8, and the room's only one
-  {
-    slug: "luminaria-de-mesa-farol-latao",
-    name: "Luminária de Mesa Farol",
-    family: "luminaria-de-mesa-farol",
-    finish: "Latão",
-    type: "luminarias-de-mesa",
-    mainEnvironment: "escritorio",
-    environments: ["escritorio"],
-    collections: [],
-    order: 63,
-    tablePrice: 142000,
-    extraMeasurements: [
-      { label: "Alcance do braço", value: 24, unit: "cm" },
-      { label: "Soquete", value: 1, unit: "un" },
-    ],
-    availability: "out-of-stock",
-    images: [
-      {
-        src: unsplash("1550226891-ef816aed4a98"),
-        alt: "Luminária de Mesa Farol em latão sobre reboco",
-        role: "main",
-        dimensions: [],
-      },
-    ],
-    description:
-      "Uma luminária de mesa em latão com base em carvalho, de corpo fechado em quatro faces, que joga a luz para baixo e não para os olhos de quem trabalha. O latão é deixado sem verniz de propósito, porque a patina que se forma nos primeiros anos é o acabamento pretendido. Fica na quina da escrivaninha, onde marca o canto de leitura.",
-  },
+  // {
+  //   slug: "luminaria-de-mesa-farol-latao",
+  //   name: "Luminária de Mesa Farol",
+  //   family: "luminaria-de-mesa-farol",
+  //   finish: "Latão",
+  //   type: "luminarias-de-mesa",
+  //   mainEnvironment: "escritorio",
+  //   environments: ["escritorio"],
+  //   collections: [],
+  //   order: 63,
+  //   tablePrice: 142000,
+  //   extraMeasurements: [
+  //     { label: "Alcance do braço", value: 24, unit: "cm" },
+  //     { label: "Soquete", value: 1, unit: "un" },
+  //   ],
+  //   availability: "out-of-stock",
+  //   images: [
+  //     {
+  //       src: unsplash("1550226891-ef816aed4a98"),
+  //       alt: "Luminária de Mesa Farol em latão sobre reboco",
+  //       role: "main",
+  //       dimensions: [],
+  //     },
+  //   ],
+  //   description:
+  //     "Uma luminária de mesa em latão com base em carvalho, de corpo fechado em quatro faces, que joga a luz para baixo e não para os olhos de quem trabalha. O latão é deixado sem verniz de propósito, porque a patina que se forma nos primeiros anos é o acabamento pretendido. Fica na quina da escrivaninha, onde marca o canto de leitura.",
+  // },
 
   // §3.4 row 64 — one of `reboco`'s six
-  {
-    slug: "luminaria-de-mesa-seixo-ceramica-cru",
-    name: "Luminária de Mesa Seixo",
-    family: "luminaria-de-mesa-seixo",
-    finish: "Cerâmica Cru",
-    type: "luminarias-de-mesa",
-    mainEnvironment: "escritorio",
-    environments: ["escritorio"],
-    collections: ["reboco"],
-    order: 64,
-    tablePrice: 98000,
-    extraMeasurements: [
-      { label: "Alcance do braço", value: 16, unit: "cm" },
-      { label: "Soquete", value: 1, unit: "un" },
-    ],
-    availability: "immediate-shipment",
-    images: [
-      {
-        src: unsplash("1540574163026-643ea20ade25"),
-        alt: "Luminária de Mesa Seixo em cerâmica cru sobre reboco",
-        role: "main",
-        dimensions: [],
-      },
-    ],
-    description:
-      "Uma luminária de mesa com base em cerâmica cru torneada e cúpula sobre haste curta em carvalho, para luz difusa ao lado do papel. A cerâmica é queimada em alta temperatura e esmaltada só por dentro, de modo que a superfície externa fica seca ao toque e não brilha sob a lâmpada. Fica na escrivaninha ou no criado-mudo, e pesa o bastante para não andar.",
-  },
+  // {
+  //   slug: "luminaria-de-mesa-seixo-ceramica-cru",
+  //   name: "Luminária de Mesa Seixo",
+  //   family: "luminaria-de-mesa-seixo",
+  //   finish: "Cerâmica Cru",
+  //   type: "luminarias-de-mesa",
+  //   mainEnvironment: "escritorio",
+  //   environments: ["escritorio"],
+  //   collections: ["reboco"],
+  //   order: 64,
+  //   tablePrice: 98000,
+  //   extraMeasurements: [
+  //     { label: "Alcance do braço", value: 16, unit: "cm" },
+  //     { label: "Soquete", value: 1, unit: "un" },
+  //   ],
+  //   availability: "immediate-shipment",
+  //   images: [
+  //     {
+  //       src: unsplash("1540574163026-643ea20ade25"),
+  //       alt: "Luminária de Mesa Seixo em cerâmica cru sobre reboco",
+  //       role: "main",
+  //       dimensions: [],
+  //     },
+  //   ],
+  //   description:
+  //     "Uma luminária de mesa com base em cerâmica cru torneada e cúpula sobre haste curta em carvalho, para luz difusa ao lado do papel. A cerâmica é queimada em alta temperatura e esmaltada só por dentro, de modo que a superfície externa fica seca ao toque e não brilha sob a lâmpada. Fica na escrivaninha ou no criado-mudo, e pesa o bastante para não andar.",
+  // },
 
   // §3.4 row 65 — montagem.necessaria false, entry price, principal only
-  {
-    slug: "luminaria-de-mesa-junco-palhinha",
-    name: "Luminária de Mesa Junco",
-    family: "luminaria-de-mesa-junco",
-    finish: "Palhinha",
-    type: "luminarias-de-mesa",
-    mainEnvironment: "escritorio",
-    environments: ["escritorio"],
-    collections: [],
-    order: 65,
-    tablePrice: 76000,
-    extraMeasurements: [
-      { label: "Alcance do braço", value: 18, unit: "cm" },
-      { label: "Soquete", value: 1, unit: "un" },
-    ],
-    availability: "immediate-shipment",
-    images: [
-      {
-        src: unsplash("1533090161767-e6ffed986c88"),
-        alt: "Luminária de Mesa Junco em palhinha sobre reboco",
-        role: "main",
-        dimensions: [],
-      },
-    ],
-    description:
-      "Uma luminária de mesa com cúpula em palhinha trançada e base em carvalho, para luz de leitura pontual. A palhinha é trançada à mão sobre um aro de madeira, e a trama aberta deixa passar o desenho da luz na parede atrás. Fica sobre a escrivaninha ou o criado-mudo, onde o alcance de 18 cm cobre a área de trabalho sem invadir o resto.",
-  },
+  // {
+  //   slug: "luminaria-de-mesa-junco-palhinha",
+  //   name: "Luminária de Mesa Junco",
+  //   family: "luminaria-de-mesa-junco",
+  //   finish: "Palhinha",
+  //   type: "luminarias-de-mesa",
+  //   mainEnvironment: "escritorio",
+  //   environments: ["escritorio"],
+  //   collections: [],
+  //   order: 65,
+  //   tablePrice: 76000,
+  //   extraMeasurements: [
+  //     { label: "Alcance do braço", value: 18, unit: "cm" },
+  //     { label: "Soquete", value: 1, unit: "un" },
+  //   ],
+  //   availability: "immediate-shipment",
+  //   images: [
+  //     {
+  //       src: unsplash("1533090161767-e6ffed986c88"),
+  //       alt: "Luminária de Mesa Junco em palhinha sobre reboco",
+  //       role: "main",
+  //       dimensions: [],
+  //     },
+  //   ],
+  //   description:
+  //     "Uma luminária de mesa com cúpula em palhinha trançada e base em carvalho, para luz de leitura pontual. A palhinha é trançada à mão sobre um aro de madeira, e a trama aberta deixa passar o desenho da luz na parede atrás. Fica sobre a escrivaninha ou o criado-mudo, onde o alcance de 18 cm cobre a área de trabalho sem invadir o resto.",
+  // },
 ];
