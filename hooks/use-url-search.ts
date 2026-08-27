@@ -1,6 +1,5 @@
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { useEffect, useRef, useState, useTransition } from "react";
-import { useDebounce } from "@/hooks/use-debounce";
 
 /**
  * Free text held in the address bar rather than in component state, so a
@@ -21,44 +20,53 @@ export function useURLSearch({
 
   const searchParam = searchParams.get(key) || "";
   const [searchInput, setSearchInput] = useState(searchParam);
-  const debouncedSearch = useDebounce(searchInput, debounceMs);
 
-  /* The last value this hook put in the address bar. Without it the sync
-     below reads its own write as an external change and pushes the field back
-     to whatever was already committed — which, mid-word, deletes the letters
-     typed while the debounce was in flight. */
-  const written = useRef(searchParam);
+  /* The last value this hook and the address bar agreed on. Everything below
+     is decided against it rather than against `searchParam`, because
+     `searchParam` moves for reasons that have nothing to do with the field —
+     a "clear filters" link, the back button — and the field must not answer
+     those by writing what it happens to be holding back into the URL. */
+  const settled = useRef(searchParam);
 
+  /* Adopt the address bar only when something else moved it. Runs before the
+     write below, so the same commit that clears the field also cancels the
+     write that field had pending. */
   useEffect(() => {
-    if (debouncedSearch.trim() === searchParam) return;
-
-    const params = new URLSearchParams(searchParams.toString());
-
-    if (debouncedSearch.trim()) {
-      params.set(key, debouncedSearch.trim());
-    } else {
-      params.delete(key);
-    }
-
-    params.delete("page");
-    written.current = debouncedSearch.trim();
-
-    startTransition(() => {
-      const query = params.toString();
-      router.replace(query ? `${pathname}?${query}` : pathname, {
-        scroll: false,
-      });
-    });
-  }, [debouncedSearch, key, pathname, router, searchParam, searchParams]);
-
-  /* Adopt the address bar only when something else moved it — the back
-     button, a "clear filters" link, a shared URL. */
-  useEffect(() => {
-    if (searchParam === written.current) return;
-    written.current = searchParam;
+    if (searchParam === settled.current) return;
+    settled.current = searchParam;
     // eslint-disable-next-line react-hooks/set-state-in-effect
     setSearchInput(searchParam);
   }, [searchParam]);
+
+  /* Typing, written back once it stops. The debounce lives here rather than
+     in a value hook so that adopting an external change cancels it: a stale
+     debounced value must never reach the address bar. */
+  useEffect(() => {
+    const value = searchInput.replace(/\s+/g, " ").trim();
+    if (value === settled.current) return;
+
+    const timer = setTimeout(() => {
+      const params = new URLSearchParams(searchParams.toString());
+
+      if (value) {
+        params.set(key, value);
+      } else {
+        params.delete(key);
+      }
+
+      params.delete("page");
+      settled.current = value;
+
+      startTransition(() => {
+        const query = params.toString();
+        router.replace(query ? `${pathname}?${query}` : pathname, {
+          scroll: false,
+        });
+      });
+    }, debounceMs);
+
+    return () => clearTimeout(timer);
+  }, [searchInput, debounceMs, key, pathname, router, searchParams]);
 
   return { searchInput, setSearchInput, isPending };
 }
