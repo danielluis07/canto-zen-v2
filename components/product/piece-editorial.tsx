@@ -3,6 +3,7 @@ import Link from "next/link";
 
 import { SectionHeader } from "@/components/home/section-header";
 import { StraddledLabel } from "@/components/product/straddled-label";
+import { articleHref } from "@/lib/journal";
 import { getProduct } from "@/lib/product-page";
 import { productHref } from "@/lib/catalog";
 import { cn } from "@/lib/utils";
@@ -23,7 +24,7 @@ export function PieceEditorial({
   photo: Article["fotos"][number];
   product: Product;
 }) {
-  const href = `/diario/${article.slug}`;
+  const href = articleHref(article.slug);
 
   const alsoInFrame = photo.pecas.flatMap((slug) => {
     const piece = getProduct(slug);

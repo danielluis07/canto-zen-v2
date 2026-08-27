@@ -1,6 +1,7 @@
 import { Hero } from "@/components/home/abertura";
 import { Collection } from "@/components/home/collection";
 import { Environments } from "@/components/home/environments";
+import { Journal } from "@/components/home/journal";
 import { ProductsRow } from "@/components/home/products-row";
 import { ProductsSpread } from "@/components/home/products-spread";
 import { colecoes } from "@/data";
@@ -34,6 +35,8 @@ export default function Home() {
         items={anchors}
         action={{ href: "/produtos", label: "Ver todos os móveis" }}
       />
+
+      <Journal />
     </>
   );
 }
