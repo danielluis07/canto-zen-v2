@@ -83,16 +83,10 @@ export const products: Product[] = [
     freeShipping: "southeast",
     images: [
       {
-        src: unsplash("1555041469-a586c61ea9bc"),
+        src: "/images/products/sofa-heron-linho-cru.webp",
         alt: "Sofá Héron em linho cru sobre reboco",
         role: "main",
         dimensions: ["width"],
-      },
-      {
-        src: unsplash("1567538096630-e0c55bd6374c"),
-        alt: "Sofá Héron em Sala",
-        role: "environment",
-        dimensions: [],
       },
     ],
     description:
@@ -120,7 +114,7 @@ export const products: Product[] = [
     productionWeeks: 6,
     images: [
       {
-        src: unsplash("1524758631624-e2822e304c36"),
+        src: "/images/products/sofa-heron-boucle-areia.webp",
         alt: "Sofá Héron em bouclé areia sobre reboco",
         role: "main",
         dimensions: [],
@@ -151,7 +145,7 @@ export const products: Product[] = [
     availability: "immediate-shipment",
     images: [
       {
-        src: unsplash("1567538096630-e0c55bd6374c"),
+        src: "/images/products/sofa-orla-linho-areia.webp",
         alt: "Sofá Orla em linho areia sobre reboco",
         role: "main",
         dimensions: [],
@@ -182,7 +176,7 @@ export const products: Product[] = [
     freeShipping: "national",
     images: [
       {
-        src: unsplash("1524758631624-e2822e304c36"),
+        src: "/images/products/sofa-taipa-couro-argila.webp",
         alt: "Sofá Taipa em couro argila sobre reboco",
         role: "main",
         dimensions: [],
@@ -213,7 +207,7 @@ export const products: Product[] = [
     productionWeeks: 5,
     images: [
       {
-        src: unsplash("1555041469-a586c61ea9bc"),
+        src: "/images/products/sofa-maruja-linho-carvao.webp",
         alt: "Sofá Marujá em linho carvão sobre reboco",
         role: "main",
         dimensions: [],
@@ -244,22 +238,10 @@ export const products: Product[] = [
     productionWeeks: 4,
     images: [
       {
-        src: unsplash("1586023492125-27b2c045efd7"),
+        src: "/images/products/poltrona-lina-linho-cru.webp",
         alt: "Poltrona Lina em linho cru sobre reboco",
         role: "main",
         dimensions: ["width"],
-      },
-      {
-        src: unsplash("1493663284031-b7e3aefcae8e"),
-        alt: "Poltrona Lina em Sala",
-        role: "environment",
-        dimensions: [],
-      },
-      {
-        src: unsplash("1540574163026-643ea20ade25"),
-        alt: "A trama do linho cru no encosto",
-        role: "detail",
-        dimensions: [],
       },
     ],
     description:
@@ -286,7 +268,7 @@ export const products: Product[] = [
     availability: "immediate-shipment",
     images: [
       {
-        src: unsplash("1550226891-ef816aed4a98"),
+        src: "/images/products/poltrona-lina-boucle-carvalho.webp",
         alt: "Poltrona Lina em bouclé carvalho sobre reboco",
         role: "main",
         dimensions: [],
@@ -316,7 +298,7 @@ export const products: Product[] = [
     productionWeeks: 5,
     images: [
       {
-        src: unsplash("1550226891-ef816aed4a98"),
+        src: "/images/products/poltrona-sagui-couro-nogueira.webp",
         alt: "Poltrona Saguí em couro nogueira sobre reboco",
         role: "main",
         dimensions: [],
@@ -342,7 +324,7 @@ export const products: Product[] = [
     availability: "immediate-shipment",
     images: [
       {
-        src: unsplash("1513506003901-1e6a229e2d15"),
+        src: "/images/products/mesa-de-centro-seixo-freijo.webp",
         alt: "Mesa de Centro Seixo em freijó sobre reboco",
         role: "main",
         dimensions: [],
@@ -369,7 +351,7 @@ export const products: Product[] = [
     productionWeeks: 7,
     images: [
       {
-        src: unsplash("1616486338812-3dadae4b4ace"),
+        src: "/images/products/mesa-de-centro-luar-marmore-off-white.webp",
         alt: "Mesa de Centro Luar em mármore off-white sobre reboco",
         role: "main",
         dimensions: [],
@@ -395,7 +377,7 @@ export const products: Product[] = [
     availability: "immediate-shipment",
     images: [
       {
-        src: unsplash("1513506003901-1e6a229e2d15"),
+        src: "/images/products/mesa-de-centro-vau-jatoba.webp",
         alt: "Mesa de Centro Vau em jatobá sobre reboco",
         role: "main",
         dimensions: [],
@@ -425,7 +407,7 @@ export const products: Product[] = [
     productionWeeks: 6,
     images: [
       {
-        src: unsplash("1594026112284-02bb6f3352fe"),
+        src: "/images/products/mesa-de-jantar-vargem-carvalho.webp",
         alt: "Mesa de Jantar Vargem em carvalho sobre reboco",
         role: "main",
         dimensions: [],
@@ -455,7 +437,7 @@ export const products: Product[] = [
     productionWeeks: 7,
     images: [
       {
-        src: unsplash("1594026112284-02bb6f3352fe"),
+        src: "/images/products/mesa-de-jantar-vargem-nogueira.webp",
         alt: "Mesa de Jantar Vargem em nogueira sobre reboco",
         role: "main",
         dimensions: [],
@@ -486,7 +468,7 @@ export const products: Product[] = [
     freeShipping: "southeast",
     images: [
       {
-        src: unsplash("1594026112284-02bb6f3352fe"),
+        src: "/images/products/mesa-de-jantar-ilhota-jatoba.webp",
         alt: "Mesa de Jantar Ilhota em jatobá sobre reboco",
         role: "main",
         dimensions: [],
@@ -516,7 +498,7 @@ export const products: Product[] = [
     productionWeeks: 6,
     images: [
       {
-        src: unsplash("1567016432779-094069958ea5"),
+        src: "/images/products/estante-cais-freijo.webp",
         alt: "Estante Cais em freijó sobre reboco",
         role: "main",
         dimensions: [],
@@ -546,7 +528,7 @@ export const products: Product[] = [
     availability: "immediate-shipment",
     images: [
       {
-        src: unsplash("1567016432779-094069958ea5"),
+        src: "/images/products/rack-varjao-carvalho.webp",
         alt: "Rack Varjão em carvalho sobre reboco",
         role: "main",
         dimensions: [],
@@ -575,7 +557,7 @@ export const products: Product[] = [
     availability: "immediate-shipment",
     images: [
       {
-        src: unsplash("1567016432779-094069958ea5"),
+        src: "/images/products/estante-tramo-aco-carvao.webp",
         alt: "Estante Tramo em aço carvão sobre reboco",
         role: "main",
         dimensions: [],
@@ -602,7 +584,7 @@ export const products: Product[] = [
     productionWeeks: 5,
     images: [
       {
-        src: unsplash("1598300042247-d088f8ab3a91"),
+        src: "/images/products/aparador-sereno-carvalho.webp",
         alt: "Aparador Sereno em carvalho sobre reboco",
         role: "main",
         dimensions: [],
@@ -629,7 +611,7 @@ export const products: Product[] = [
     productionWeeks: 8,
     images: [
       {
-        src: unsplash("1598300042247-d088f8ab3a91"),
+        src: "/images/products/aparador-pedra-marmore-cru.webp",
         alt: "Aparador Pedra em mármore cru sobre reboco",
         role: "main",
         dimensions: [],
@@ -655,7 +637,7 @@ export const products: Product[] = [
     availability: "immediate-shipment",
     images: [
       {
-        src: unsplash("1598300042247-d088f8ab3a91"),
+        src: "/images/products/aparador-junco-palhinha-freijo.webp",
         alt: "Aparador Junco em palhinha e freijó sobre reboco",
         role: "main",
         dimensions: [],
@@ -686,22 +668,10 @@ export const products: Product[] = [
     productionWeeks: 6,
     images: [
       {
-        src: unsplash("1505693416388-ac5ce068fe85"),
+        src: "/images/products/cama-nuvem-linho-cru.webp",
         alt: "Cama Nuvem em linho cru sobre reboco",
         role: "main",
         dimensions: ["width"],
-      },
-      {
-        src: unsplash("1583847268964-b28dc8f51f92"),
-        alt: "Cama Nuvem em Quarto",
-        role: "environment",
-        dimensions: [],
-      },
-      {
-        src: unsplash("1540574163026-643ea20ade25"),
-        alt: "A costura que fecha a quina da cabeceira estofada",
-        role: "detail",
-        dimensions: [],
       },
     ],
     description:
@@ -728,7 +698,7 @@ export const products: Product[] = [
     productionWeeks: 6,
     images: [
       {
-        src: unsplash("1522708323590-d24dbb6b0267"),
+        src: "/images/products/cama-nuvem-boucle-areia.webp",
         alt: "Cama Nuvem em bouclé areia sobre reboco",
         role: "main",
         dimensions: [],
@@ -757,7 +727,7 @@ export const products: Product[] = [
     availability: "immediate-shipment",
     images: [
       {
-        src: unsplash("1616594039964-ae9021a400a0"),
+        src: "/images/products/cama-orvalho-carvalho.webp",
         alt: "Cama Orvalho em carvalho sobre reboco",
         role: "main",
         dimensions: [],
@@ -787,7 +757,7 @@ export const products: Product[] = [
     productionWeeks: 5,
     images: [
       {
-        src: unsplash("1595526114035-0d45ed16cfbf"),
+        src: "/images/products/cama-tatami-freijo.webp",
         alt: "Cama Tatami em freijó sobre reboco",
         role: "main",
         dimensions: [],
@@ -818,7 +788,7 @@ export const products: Product[] = [
     freeShipping: "southeast",
     images: [
       {
-        src: unsplash("1560448204-e02f11c3d0e2"),
+        src: "/images/products/cama-abrigo-couro-argila.webp",
         alt: "Cama Abrigo em couro argila sobre reboco",
         role: "main",
         dimensions: [],
@@ -844,7 +814,7 @@ export const products: Product[] = [
     availability: "immediate-shipment",
     images: [
       {
-        src: unsplash("1505693416388-ac5ce068fe85"),
+        src: "/images/products/cabeceira-vela-linho-areia.webp",
         alt: "Cabeceira Vela em linho areia sobre reboco",
         role: "main",
         dimensions: [],
@@ -871,7 +841,7 @@ export const products: Product[] = [
     productionWeeks: 4,
     images: [
       {
-        src: unsplash("1522708323590-d24dbb6b0267"),
+        src: "/images/products/cabeceira-vela-boucle-cru.webp",
         alt: "Cabeceira Vela em bouclé cru sobre reboco",
         role: "main",
         dimensions: [],
@@ -898,7 +868,7 @@ export const products: Product[] = [
     productionWeeks: 4,
     images: [
       {
-        src: unsplash("1616594039964-ae9021a400a0"),
+        src: "/images/products/cabeceira-ripado-carvalho.webp",
         alt: "Cabeceira Ripado em carvalho sobre reboco",
         role: "main",
         dimensions: [],
@@ -926,7 +896,7 @@ export const products: Product[] = [
     availability: "immediate-shipment",
     images: [
       {
-        src: unsplash("1611967164521-abae8fba4668"),
+        src: "/images/products/criado-mudo-seixo-freijo.webp",
         alt: "Criado-mudo Seixo em freijó sobre reboco",
         role: "main",
         dimensions: [],
@@ -955,7 +925,7 @@ export const products: Product[] = [
     productionWeeks: 3,
     images: [
       {
-        src: unsplash("1558211583-d26f610c1eb1"),
+        src: "/images/products/criado-mudo-luar-nogueira.webp",
         alt: "Criado-mudo Luar em nogueira sobre reboco",
         role: "main",
         dimensions: [],
@@ -983,7 +953,7 @@ export const products: Product[] = [
     availability: "immediate-shipment",
     images: [
       {
-        src: unsplash("1598300042247-d088f8ab3a91"),
+        src: "/images/products/criado-mudo-junco-palhinha.webp",
         alt: "Criado-mudo Junco em palhinha e freijó sobre reboco",
         role: "main",
         dimensions: [],
@@ -1012,7 +982,7 @@ export const products: Product[] = [
     productionWeeks: 5,
     images: [
       {
-        src: unsplash("1558211583-d26f610c1eb1"),
+        src: "/images/products/comoda-vargem-carvalho.webp",
         alt: "Cômoda Vargem em carvalho sobre reboco",
         role: "main",
         dimensions: [],
@@ -1041,7 +1011,7 @@ export const products: Product[] = [
     productionWeeks: 6,
     images: [
       {
-        src: unsplash("1512918728675-ed5a9ecdebfd"),
+        src: "/images/products/comoda-tramo-nogueira.webp",
         alt: "Cômoda Tramo em nogueira sobre reboco",
         role: "main",
         dimensions: [],
@@ -1069,7 +1039,7 @@ export const products: Product[] = [
     availability: "out-of-stock",
     images: [
       {
-        src: unsplash("1512918728675-ed5a9ecdebfd"),
+        src: "/images/products/comoda-bruma-freijo.webp",
         alt: "Cômoda Bruma em freijó sobre reboco",
         role: "main",
         dimensions: [],
@@ -1100,7 +1070,7 @@ export const products: Product[] = [
     freeShipping: "national",
     images: [
       {
-        src: unsplash("1594620302200-9a762244a156"),
+        src: "/images/products/guarda-roupa-cais-carvalho.webp",
         alt: "Guarda-roupa Cais em carvalho sobre reboco",
         role: "main",
         dimensions: [],
@@ -1130,7 +1100,7 @@ export const products: Product[] = [
     productionWeeks: 8,
     images: [
       {
-        src: unsplash("1631049307264-da0ec9d70304"),
+        src: "/images/products/guarda-roupa-ripado-freijo.webp",
         alt: "Guarda-roupa Ripado em freijó sobre reboco",
         role: "main",
         dimensions: [],
@@ -1160,7 +1130,7 @@ export const products: Product[] = [
     productionWeeks: 8,
     images: [
       {
-        src: unsplash("1631049307264-da0ec9d70304"),
+        src: "/images/products/guarda-roupa-bruma-nogueira.webp",
         alt: "Guarda-roupa Bruma em nogueira sobre reboco",
         role: "main",
         dimensions: [],
@@ -1190,7 +1160,7 @@ export const products: Product[] = [
     productionWeeks: 6,
     images: [
       {
-        src: unsplash("1594620302200-9a762244a156"),
+        src: "/images/products/mesa-taipa-jatoba.webp",
         alt: "Mesa Taipa em jatobá sobre reboco",
         role: "main",
         dimensions: [],
@@ -1219,7 +1189,7 @@ export const products: Product[] = [
     availability: "immediate-shipment",
     images: [
       {
-        src: unsplash("1595526114035-0d45ed16cfbf"),
+        src: "/images/products/mesa-orla-carvalho.webp",
         alt: "Mesa Orla em carvalho sobre reboco",
         role: "main",
         dimensions: [],
@@ -1249,7 +1219,7 @@ export const products: Product[] = [
     productionWeeks: 8,
     images: [
       {
-        src: unsplash("1550226891-ef816aed4a98"),
+        src: "/images/products/mesa-pedra-marmore-carvao.webp",
         alt: "Mesa Pedra em mármore carvão sobre reboco",
         role: "main",
         dimensions: [],
@@ -1278,22 +1248,10 @@ export const products: Product[] = [
     availability: "immediate-shipment",
     images: [
       {
-        src: unsplash("1506439773649-6e0eb8cfb237"),
+        src: "/images/products/cadeira-junco-palhinha-freijo.webp",
         alt: "Cadeira Junco em palhinha e freijó sobre reboco",
         role: "main",
         dimensions: ["width"],
-      },
-      {
-        src: unsplash("1519710164239-da123dc03ef4"),
-        alt: "Cadeira Junco em Cozinha",
-        role: "environment",
-        dimensions: [],
-      },
-      {
-        src: unsplash("1592078615290-033ee584e267"),
-        alt: "O caixilho ranhurado que segura a palhinha do assento",
-        role: "detail",
-        dimensions: [],
       },
     ],
     description:
@@ -1322,7 +1280,7 @@ export const products: Product[] = [
     productionWeeks: 4,
     images: [
       {
-        src: unsplash("1503602642458-232111445657"),
+        src: "/images/products/cadeira-junco-couro-argila.webp",
         alt: "Cadeira Junco em couro argila sobre reboco",
         role: "main",
         dimensions: [],
@@ -1352,7 +1310,7 @@ export const products: Product[] = [
     availability: "immediate-shipment",
     images: [
       {
-        src: unsplash("1506439773649-6e0eb8cfb237"),
+        src: "/images/products/cadeira-vime-rattan-cru.webp",
         alt: "Cadeira Vime em rattan cru sobre reboco",
         role: "main",
         dimensions: [],
@@ -1381,7 +1339,7 @@ export const products: Product[] = [
     availability: "immediate-shipment",
     images: [
       {
-        src: unsplash("1503602642458-232111445657"),
+        src: "/images/products/cadeira-tramo-aco-carvao.webp",
         alt: "Cadeira Tramo em aço carvão sobre reboco",
         role: "main",
         dimensions: [],
@@ -1410,7 +1368,7 @@ export const products: Product[] = [
     availability: "immediate-shipment",
     images: [
       {
-        src: unsplash("1594026112284-02bb6f3352fe"),
+        src: "/images/products/banqueta-seixo-carvalho.webp",
         alt: "Banqueta Seixo em carvalho sobre reboco",
         role: "main",
         dimensions: [],
@@ -1440,7 +1398,7 @@ export const products: Product[] = [
     productionWeeks: 4,
     images: [
       {
-        src: unsplash("1586023492125-27b2c045efd7"),
+        src: "/images/products/banqueta-vau-freijo.webp",
         alt: "Banqueta Vau em freijó sobre reboco",
         role: "main",
         dimensions: [],
@@ -1469,7 +1427,7 @@ export const products: Product[] = [
     availability: "immediate-shipment",
     images: [
       {
-        src: unsplash("1594026112284-02bb6f3352fe"),
+        src: "/images/products/banqueta-tramo-aco-carvao.webp",
         alt: "Banqueta Tramo em aço carvão sobre reboco",
         role: "main",
         dimensions: [],
