@@ -52,7 +52,7 @@ export function Collection({
             {collection.nome}
           </h2>
 
-          <p className="mt-6 max-w-[44ch] text-[1.0625rem] leading-relaxed text-muted-foreground">
+          <p className="mt-6 max-w-[44ch] text-[1.0625rem] leading-relaxed text-foreground">
             {collection.descricao}
           </p>
 

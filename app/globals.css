@@ -72,7 +72,7 @@
   --sage: oklch(0.617 0.045 130.6); /* #7C8B6F */
   --sage-deep: oklch(0.518 0.044 132.2); /* #5F6E54 */
   --oak: oklch(0.655 0.086 57.1); /* #B9835B */
-  --oak-deep: oklch(0.571 0.081 56.6); /* #9C6B47 */
+  --oak-deep: oklch(0.545 0.081 56.6); /* darkened from 0.571 for AA hover contrast */
   --line: oklch(0.902 0.017 84.6); /* #E4DED2 */
   --sky: oklch(0.968 0.023 78.2); /* #FDF3E4 */
 }
