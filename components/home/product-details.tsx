@@ -44,8 +44,10 @@ export function ProductPrice({
 }) {
   return (
     <p className={cn("flex items-baseline gap-2", className)}>
+      {/* The strike is what marks the figure as spent, so it carries full
+          secondary contrast rather than being dimmed twice over. */}
       {previous && (
-        <span className="text-[0.8125rem] text-muted-foreground/75 line-through">
+        <span className="text-[0.8125rem] text-muted-foreground line-through">
           <span className="sr-only">preço anterior </span>
           {formatPrice(previous)}
         </span>
@@ -57,7 +59,9 @@ export function ProductPrice({
   );
 }
 
-/** Sage for a promise the store can keep; muted ink for one it cannot. */
+/** Sage for a promise the store can keep; stone for one it cannot. Stone is
+ *  used at full strength: the colour change is already the whole signal, and
+ *  fading it as well put the tag under the contrast floor. */
 export function AvailabilityTag({
   label,
   isSoldOut,
@@ -71,7 +75,7 @@ export function AvailabilityTag({
     <p
       className={cn(
         "text-[0.625rem] tracking-[0.14em] uppercase",
-        isSoldOut ? "text-muted-foreground/70" : "text-sage-deep",
+        isSoldOut ? "text-muted-foreground" : "text-sage-deep",
         className,
       )}>
       {label}

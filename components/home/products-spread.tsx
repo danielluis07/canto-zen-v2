@@ -7,6 +7,7 @@ import {
   WidthRuler,
 } from "@/components/home/product-details";
 import { SectionHeader } from "@/components/home/section-header";
+import { StraddledLabel } from "@/components/product/straddled-label";
 import { getProductFacts, productHref } from "@/lib/catalog";
 import type { Product } from "@/types";
 
@@ -22,12 +23,7 @@ function ProductPlate({ product, label }: SpreadItem) {
 
   return (
     <li className="relative border-t border-line pt-9 lg:pt-11">
-      {/* The label straddles its own rule, the way a callout sits on a section
-          line in a measured drawing. The page ground masks the hairline behind
-          it, so the rule reads as broken rather than crossed out. */}
-      <span className="absolute top-0 left-0 -translate-y-1/2 bg-background pr-4 text-[0.625rem] font-medium tracking-[0.18em] text-muted-foreground uppercase">
-        {label}
-      </span>
+      <StraddledLabel>{label}</StraddledLabel>
 
       <Link
         href={productHref(product)}

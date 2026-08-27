@@ -1,8 +1,8 @@
-import { ShieldCheck, Sprout, Truck } from "lucide-react";
 import Link from "next/link";
 
 import { Wordmark } from "@/components/layout/wordmark";
 import { colecoes } from "@/data";
+import { storeCommitments } from "@/lib/commitments";
 import {
   catalogLinks,
   environmentLinks,
@@ -16,17 +16,6 @@ const collectionLinks: NavLink[] = colecoes.map((collection) => ({
   href: `/colecoes/${collection.slug}`,
   label: `Coleção ${collection.nome}`,
 }));
-
-/**
- * Three literal claims, not a values statement: what the wood is, how long the
- * frame is covered, where shipping is free. Sage marks them as the natural,
- * calm register — never the interactive one.
- */
-const commitments = [
-  { icon: Sprout, text: "Madeira maciça de manejo certificado FSC" },
-  { icon: ShieldCheck, text: "Garantia de 5 anos na estrutura" },
-  { icon: Truck, text: "Frete grátis para o Sudeste acima de R$ 1.200" },
-];
 
 function FooterColumn({ title, links }: { title: string; links: NavLink[] }) {
   return (
@@ -69,8 +58,11 @@ export function Footer() {
               conforme a peça.
             </p>
 
+            {/* Three literal claims, not a values statement: what the wood is,
+                how long the frame is covered, where shipping is free. Sage
+                marks them as the natural register, never the interactive one. */}
             <ul className="mt-8 flex flex-col gap-3 border-t border-line pt-7">
-              {commitments.map((commitment) => (
+              {storeCommitments.map((commitment) => (
                 <li
                   key={commitment.text}
                   className="flex items-start gap-3 text-sm text-muted-foreground">

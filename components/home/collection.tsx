@@ -13,7 +13,15 @@ import type { Collection as CollectionType } from "@/types";
  * The band is greige rather than the page's warm white — the only colour
  * change on the page, and it is doing structural work.
  */
-export function Collection({ collection }: { collection: CollectionType }) {
+export function Collection({
+  collection,
+  /** Overridden where the band appears beside a piece that belongs to the set,
+   *  so the label states the relation instead of repeating the section's name. */
+  label = "Coleção",
+}: {
+  collection: CollectionType;
+  label?: string;
+}) {
   const href = `/colecoes/${collection.slug}`;
   const pieceCount = collection.produtos.length;
 
@@ -37,7 +45,7 @@ export function Collection({ collection }: { collection: CollectionType }) {
 
         <div className="rise lg:col-span-5">
           <p className="border-t border-foreground/20 pt-5 text-[0.6875rem] font-medium tracking-[0.18em] text-muted-foreground uppercase">
-            Coleção · {pieceCount} peças
+            {label} · {pieceCount} peças
           </p>
 
           <h2 className="mt-5 font-heading text-[clamp(2.25rem,4vw,3.25rem)] leading-[1.04] font-light">
